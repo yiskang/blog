@@ -139,24 +139,56 @@ $ git submodule add https://github.com/skywinder/ActionSheetPicker-3.0.git
 ```
 
 2. 用 Finder 打開專案目錄底下的 ActionSheetPicker-3.0 資料夾，然後將 /CoreActionSheetPicker/CoreActionSheetPicker.xcodeproj 拖到 Xcode 的 Project Navigator 裡面。
-<div style="width:25%;margin:0 auto;display:block;">![ProjectSetting](images/Dropdwn.png)</div>
+<div style="width:25%;margin:0 auto;display:block;">
+
+![ProjectSetting](images/Dropdwn.png)
+
+</div>
 
 3. 用滑數點擊 Xcode Project Navigator 裡最上面的專案圖案（藍色的 Icon），右邊跳出專案設定，如下圖：
-<div style="width:70%;margin:0 auto;display:block;">![ProjectSetting](images/Dropdwn2.png)</div>
+<div style="width:70%;margin:0 auto;display:block;">
+
+![ProjectSetting](images/Dropdwn2.png)
+
+</div>
 
 4. 切換專案設定的標籤到 Build Phases，在 Target Dependancy 裡面新增 CoreActionSheetPicker.framework。
-<div style="width:65%;margin:0 auto;display:block;">![ProjectSetting](images/Dropdwn3.png)</div>
+<div style="width:65%;margin:0 auto;display:block;">
+
+![ProjectSetting](images/Dropdwn3.png)
+
+</div>
 
 5. 一樣在 Build Phases 裡，新增一個 New Copy Files Phase，將其重新命名為 Copy Frameworks。
-<div style="width:35%;margin:0 auto;display:block;">![ProjectSetting](images/Dropdwn4.png)</div>
-<div style="width:35%;margin:0 auto;display:block;">![ProjectSetting](images/Dropdwn5.png)</div>
+<div style="width:35%;margin:0 auto;display:block;">
+
+![ProjectSetting](images/Dropdwn4.png)
+
+</div>
+<div style="width:35%;margin:0 auto;display:block;">
+
+![ProjectSetting](images/Dropdwn5.png)
+
+</div>
 
 6. 在 Copy Frameworks 裡，選擇 Destination 為 Frameworks，然後新增 CoreActionSheetPicker.framework。
-<div style="width:65%;margin:0 auto;display:block;">![ProjectSetting](images/Dropdwn6.png)</div>
+<div style="width:65%;margin:0 auto;display:block;">
+
+![ProjectSetting](images/Dropdwn6.png)
+
+</div>
 
 7. 隨便新增一個 Objective-C 檔案到專案裡面，然後 Xcode 會詢問是不是要新增 Objective-C Bridge Header，請按「是」。
-<div style="width:60%;margin:0 auto;display:block;">![ProjectSetting](images/Dropdwn7.png)</div>
-<div style="width:60%;margin:0 auto;display:block;">![ProjectSetting](images/Dropdwn8.png)</div>
+<div style="width:60%;margin:0 auto;display:block;">
+
+![ProjectSetting](images/Dropdwn7.png)
+
+</div>
+<div style="width:60%;margin:0 auto;display:block;">
+
+![ProjectSetting](images/Dropdwn8.png)
+
+</div>
 
 8. 在「專案名稱-Bridging-Header.h」裡新增下面這行：
 ```ObjectiveC

@@ -15,7 +15,9 @@ tags:
 ```
 2. 將 Git 執行檔的位置加到使用者環境變數（User Environment Variables）：
 <div style="width:300px;margin:0 auto;display:block;">
+
 ![GitImg](images/GitPath.jpg)
+
 </div>
 3. 重開命令提示字元（Command Prompt）或是 PowerShell，就可以開心使用摟～
 

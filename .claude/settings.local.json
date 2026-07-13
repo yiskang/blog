@@ -1,0 +1,44 @@
+{
+  "permissions": {
+    "allow": [
+      "Agent",
+
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git worktree add *)",
+      "Bash(git worktree list)",
+      "Bash(git worktree list *)",
+
+      "mcp__playwright__browser_console_messages",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_snapshot",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_find",
+      "mcp__playwright__browser_resize"
+    ],
+
+    "ask": [
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_type",
+      "mcp__playwright__browser_evaluate",
+      "mcp__playwright__browser_run_code_unsafe"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__playwright__browser_navigate",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "url=$(jq -r '.tool_input.url // \"\"' 2>/dev/null); if echo \"$url\" | grep -qE '^http://localhost:4000/blog($|/)'; then exit 0; else echo \"{\\\"decision\\\":\\\"block\\\",\\\"reason\\\":\\\"Only http://localhost:4000/blog/ URLs are allowed by this project's policy\\\"}\"; exit 2; fi"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "playwright"
+  ]
+}

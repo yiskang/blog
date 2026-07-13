@@ -1,0 +1,54 @@
+{
+  "permissions": {
+    "ask": [
+      "Bash(git checkout *)",
+      "Bash(git switch *)",
+      "Bash(git restore *)",
+
+      "Bash(npm run deploy)",
+      "Bash(npm run deploy -- *)",
+      "Bash(npx hexo deploy *)",
+      "Bash(hexo deploy *)"
+    ],
+
+    "deny": [
+      "Edit(node_modules/**)",
+      "Write(node_modules/**)",
+
+      "Edit(.deploy_git/**)",
+      "Write(.deploy_git/**)",
+
+      "Edit(.git/config)",
+      "Write(.git/config)",
+
+      "Edit(.git/hooks/**)",
+      "Write(.git/hooks/**)"
+    ]
+  },
+
+  "sandbox": {
+    "enabled": true,
+    "failIfUnavailable": true,
+    "autoAllowBashIfSandboxed": true,
+    "allowUnsandboxedCommands": false,
+
+    "filesystem": {
+      "allowWrite": [
+        ".git/**"
+      ],
+
+      "denyWrite": [
+        "~/.claude/plugins/cache",
+        ".git/config",
+        ".git/hooks/**"
+      ],
+
+      "denyRead": [
+        "~/.ssh",
+        "~/.aws",
+        "~/.gnupg",
+        "~/.config/gcloud"
+      ]
+    }
+  }
+}

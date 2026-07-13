@@ -3,37 +3,46 @@
 <head>
   <meta charset="utf-8">
   
+  
   <title>Add UITextField on UIView Programmitically by Swift | 13筆記</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="好像有點久沒有寫文章。。。
-最近開始玩 iOS SDK，今天不知道哪根筋不對，突然不想用 Interface Builder 拉 UI，想直接用寫 Code 的方式生，所以我就翻了一下關方手冊，還有拜了 Google 大神！萬事起頭難，我們就先從簡單的開始吧，以下是我找到的方法，請參考！
-最簡單的作法從官方手冊上看到最簡單的辦法就是直接呼叫 UITextField(frame:) 這個建構式，但這">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="好像有點久沒有寫文章。。。 最近開始玩 iOS SDK，今天不知道哪根筋不對，突然不想用 Interface Builder 拉 UI，想直接用寫 Code 的方式生，所以我就翻了一下關方手冊，還有拜了 Google 大神！萬事起頭難，我們就先從簡單的開始吧，以下是我找到的方法，請參考！ 最簡單的作法從官方手冊上看到最簡單的辦法就是直接呼叫 UITextField(frame:) 這個建構式，但這">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Add UITextField on UIView Programmitically by Swift">
 <meta property="og:url" content="http://yiskang.github.io/blog/2015/07/17/Add-UITextField-on-UIView-Programmitically-by-Swift/index.html">
 <meta property="og:site_name" content="13筆記">
-<meta property="og:description" content="好像有點久沒有寫文章。。。
-最近開始玩 iOS SDK，今天不知道哪根筋不對，突然不想用 Interface Builder 拉 UI，想直接用寫 Code 的方式生，所以我就翻了一下關方手冊，還有拜了 Google 大神！萬事起頭難，我們就先從簡單的開始吧，以下是我找到的方法，請參考！
-最簡單的作法從官方手冊上看到最簡單的辦法就是直接呼叫 UITextField(frame:) 這個建構式，但這">
-<meta property="og:updated_time" content="2016-09-01T07:58:05.000Z">
+<meta property="og:description" content="好像有點久沒有寫文章。。。 最近開始玩 iOS SDK，今天不知道哪根筋不對，突然不想用 Interface Builder 拉 UI，想直接用寫 Code 的方式生，所以我就翻了一下關方手冊，還有拜了 Google 大神！萬事起頭難，我們就先從簡單的開始吧，以下是我找到的方法，請參考！ 最簡單的作法從官方手冊上看到最簡單的辦法就是直接呼叫 UITextField(frame:) 這個建構式，但這">
+<meta property="og:locale">
+<meta property="article:published_time" content="2015-07-17T11:44:40.000Z">
+<meta property="article:modified_time" content="2026-07-13T03:31:00.655Z">
+<meta property="article:author" content="Eason Kang">
+<meta property="article:tag" content="Swift">
+<meta property="article:tag" content="UI">
+<meta property="article:tag" content="iOS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Add UITextField on UIView Programmitically by Swift">
-<meta name="twitter:description" content="好像有點久沒有寫文章。。。
-最近開始玩 iOS SDK，今天不知道哪根筋不對，突然不想用 Interface Builder 拉 UI，想直接用寫 Code 的方式生，所以我就翻了一下關方手冊，還有拜了 Google 大神！萬事起頭難，我們就先從簡單的開始吧，以下是我找到的方法，請參考！
-最簡單的作法從官方手冊上看到最簡單的辦法就是直接呼叫 UITextField(frame:) 這個建構式，但這">
   
-    <link rel="alternate" href="/atom.xml" title="13筆記" type="application/atom+xml">
+    <link rel="alternate" href="/blog/atom.xml" title="13筆記" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="shortcut icon" href="/blog/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/blog/css/style.css">
-  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
-</head>
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
   <div id="container">
@@ -49,7 +58,7 @@
     </div>
     <div id="header-inner" class="inner">
       <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
         
           <a class="main-nav-link" href="/blog/">Home</a>
         
@@ -58,21 +67,23 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+          <a class="nav-icon" href="/blog/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yiskang.github.io/blog"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yiskang.github.io/blog"></form>
       </div>
     </div>
   </div>
 </header>
+
       <div class="outer">
-        <section id="main"><article id="post-Add-UITextField-on-UIView-Programmitically-by-Swift" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Add-UITextField-on-UIView-Programmitically-by-Swift" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/blog/2015/07/17/Add-UITextField-on-UIView-Programmitically-by-Swift/" class="article-date">
-  <time datetime="2015-07-17T03:44:40.000Z" itemprop="datePublished">2015-07-17</time>
+  <time class="dt-published" datetime="2015-07-17T11:44:40.000Z" itemprop="datePublished">2015-07-17</time>
 </a>
     
   <div class="article-category">
@@ -86,28 +97,33 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
+    <h1 class="p-name article-title" itemprop="headline name">
       Add UITextField on UIView Programmitically by Swift
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <p>好像有點久沒有寫文章。。。</p>
 <p>最近開始玩 iOS SDK，今天不知道哪根筋不對，突然不想用 Interface Builder 拉 UI，想直接用寫 Code 的方式生，所以我就翻了一下關方手冊，還有拜了 Google 大神！萬事起頭難，我們就先從簡單的開始吧，以下是我找到的方法，請參考！</p>
-<h3 id="最簡單的作法"><a href="#最簡單的作法" class="headerlink" title="最簡單的作法"></a>最簡單的作法</h3><p>從官方手冊上看到最簡單的辦法就是直接呼叫 UITextField(frame:) 這個建構式，但這個建構式必須傳入一個 CGRect 型別的 frame 變數，到這個 frame 要怎麼建立勒？官方提供了 <a href="https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CGGeometry/index.html#//apple_ref/c/func/CGRectMake" target="_blank" rel="external">CGRectMake(x, y, width, height)</a> 這個方法可以快速的產生 UITextField 需要的 frame，說簡單一點就是透過 CGRectMake() 告訴 iOS 這個 UITextField 的外框多大、位置在哪，最後透過 addSubview() 這個方法將 UITextField 放到 view 上面。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//產生 UITextField 元件</span></div><div class="line"><span class="keyword">var</span> txtField = <span class="type">UITextField</span>(frame: <span class="type">CGRectMake</span>(<span class="number">10</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">30</span>));</div><div class="line"></div><div class="line"><span class="comment">//放到 view 上面</span></div><div class="line"><span class="keyword">self</span>.view.addSubview(txtField);</div></pre></td></tr></table></figure></p>
-<h3 id="進階的作法"><a href="#進階的作法" class="headerlink" title="進階的作法"></a>進階的作法</h3><p>透過上述的方式可以快速產生一個白白的 UITextField，但如果想產生像 Interface Builder 拉出來的，要怎麼做？除了上面那兩行外，還做一些額外的設定，這樣 UITextField 就可以像 iOS 預設的一樣簡單又漂亮！以下是我的做法：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> txtField = <span class="type">UITextField</span>(frame: <span class="type">CGRectMake</span>(<span class="number">10</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">30</span>));</div><div class="line">txtField.borderStyle = <span class="type">UITextBorderStyle</span>.<span class="type">RoundedRect</span>;</div><div class="line">txtField.font = <span class="type">UIFont</span>.systemFontOfSize(<span class="number">15</span>);</div><div class="line">txtField.placeholder = <span class="string">"Select Drawing"</span>;</div><div class="line">txtField.autocorrectionType = <span class="type">UITextAutocorrectionType</span>.<span class="type">No</span>;</div><div class="line">txtField.keyboardType = <span class="type">UIKeyboardType</span>.<span class="type">Default</span>;</div><div class="line">txtField.returnKeyType = <span class="type">UIReturnKeyType</span>.<span class="type">Done</span>;</div><div class="line">txtField.clearButtonMode = <span class="type">UITextFieldViewMode</span>.<span class="type">WhileEditing</span>;</div><div class="line">txtField.contentVerticalAlignment = <span class="type">UIControlContentVerticalAlignment</span>.<span class="type">Center</span>;</div><div class="line"></div><div class="line"><span class="keyword">self</span>.view.addSubview(txtField);</div></pre></td></tr></table></figure></p>
-<p>Ref. <a href="https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/CreatingViews/CreatingViews.html#//apple_ref/doc/uid/TP40009503-CH5-SW1" target="_blank" rel="external">View Programming Guilde for iOS</a></p>
+<h3 id="最簡單的作法"><a href="#最簡單的作法" class="headerlink" title="最簡單的作法"></a>最簡單的作法</h3><p>從官方手冊上看到最簡單的辦法就是直接呼叫 UITextField(frame:) 這個建構式，但這個建構式必須傳入一個 CGRect 型別的 frame 變數，到這個 frame 要怎麼建立勒？官方提供了 <a href="https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CGGeometry/index.html#//apple_ref/c/func/CGRectMake">CGRectMake(x, y, width, height)</a> 這個方法可以快速的產生 UITextField 需要的 frame，說簡單一點就是透過 CGRectMake() 告訴 iOS 這個 UITextField 的外框多大、位置在哪，最後透過 addSubview() 這個方法將 UITextField 放到 view 上面。 </p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//產生 UITextField 元件</span></span><br><span class="line"><span class="keyword">var</span> txtField <span class="operator">=</span> <span class="type">UITextField</span>(frame: <span class="type">CGRectMake</span>(<span class="number">10</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">30</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">//放到 view 上面</span></span><br><span class="line"><span class="keyword">self</span>.view.addSubview(txtField);</span><br></pre></td></tr></table></figure>
+
+<h3 id="進階的作法"><a href="#進階的作法" class="headerlink" title="進階的作法"></a>進階的作法</h3><p>透過上述的方式可以快速產生一個白白的 UITextField，但如果想產生像 Interface Builder 拉出來的，要怎麼做？除了上面那兩行外，還做一些額外的設定，這樣 UITextField 就可以像 iOS 預設的一樣簡單又漂亮！以下是我的做法：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> txtField <span class="operator">=</span> <span class="type">UITextField</span>(frame: <span class="type">CGRectMake</span>(<span class="number">10</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">30</span>));</span><br><span class="line">txtField.borderStyle <span class="operator">=</span> <span class="type">UITextBorderStyle</span>.<span class="type">RoundedRect</span>;</span><br><span class="line">txtField.font <span class="operator">=</span> <span class="type">UIFont</span>.systemFontOfSize(<span class="number">15</span>);</span><br><span class="line">txtField.placeholder <span class="operator">=</span> <span class="string">&quot;Select Drawing&quot;</span>;</span><br><span class="line">txtField.autocorrectionType <span class="operator">=</span> <span class="type">UITextAutocorrectionType</span>.<span class="type">No</span>;</span><br><span class="line">txtField.keyboardType <span class="operator">=</span> <span class="type">UIKeyboardType</span>.<span class="type">Default</span>;</span><br><span class="line">txtField.returnKeyType <span class="operator">=</span> <span class="type">UIReturnKeyType</span>.<span class="type">Done</span>;</span><br><span class="line">txtField.clearButtonMode <span class="operator">=</span> <span class="type">UITextFieldViewMode</span>.<span class="type">WhileEditing</span>;</span><br><span class="line">txtField.contentVerticalAlignment <span class="operator">=</span> <span class="type">UIControlContentVerticalAlignment</span>.<span class="type">Center</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">self</span>.view.addSubview(txtField);</span><br></pre></td></tr></table></figure>
+
+<p>Ref. <a href="https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/CreatingViews/CreatingViews.html#//apple_ref/doc/uid/TP40009503-CH5-SW1">View Programming Guilde for iOS</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yiskang.github.io/blog/blog/2015/07/17/Add-UITextField-on-UIView-Programmitically-by-Swift/" data-id="cixyhmykk0004iex7ugyoauxx" class="article-share-link">Share</a>
+      <a data-url="http://yiskang.github.io/blog/2015/07/17/Add-UITextField-on-UIView-Programmitically-by-Swift/" data-id="cuidIXb50x-KU6cbPV0F4TyVu" data-title="Add UITextField on UIView Programmitically by Swift" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Swift/">Swift</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UI/">UI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/iOS/">iOS</a></li></ul>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Swift/" rel="tag">Swift</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UI/" rel="tag">UI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/iOS/" rel="tag">iOS</a></li></ul>
 
     </footer>
   </div>
@@ -115,8 +131,8 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List、Combobox-by-Swift/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+    <a href="/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List%E3%80%81Combobox-by-Swift/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
       <div class="article-nav-title">
         
           iOS Pulldown List(Dropdown List、Combobox) by Swift
@@ -126,7 +142,7 @@
   
   
     <a href="/blog/2015/05/06/Use-Atlassian-Source-Tree-embedded-git-in-Windows/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Älter</strong>
       <div class="article-nav-title">Use Atlassian Source Tree embedded git in Windows</div>
     </a>
   
@@ -135,13 +151,14 @@
   
 </article>
 
+
 </section>
         
           <aside id="sidebar">
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Kategorien</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/">Tech</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/BIM/">BIM</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/Mac-OS/">Mac OS</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/OS-X/">OS X</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/Windows/">Windows</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/iOS/">iOS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/iOS/UI/">UI</a></li></ul></li></ul></li></ul>
     </div>
@@ -153,7 +170,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OS-X/">OS X</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Objective-C/">Objective-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Plugin/">Plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Revit/">Revit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/UI/">UI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/iOS/">iOS</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OS-X/" rel="tag">OS X</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Objective-C/" rel="tag">Objective-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Plugin/" rel="tag">Plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Revit/" rel="tag">Revit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Swift/" rel="tag">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/UI/" rel="tag">UI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/iOS/" rel="tag">iOS</a></li></ul>
     </div>
   </div>
 
@@ -170,7 +187,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/04/">April 2015</a></li></ul>
     </div>
@@ -180,12 +197,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List、Combobox-by-Swift/">iOS Pulldown List(Dropdown List、Combobox) by Swift</a>
+            <a href="/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List%E3%80%81Combobox-by-Swift/">iOS Pulldown List(Dropdown List、Combobox) by Swift</a>
           </li>
         
           <li>
@@ -201,7 +218,7 @@
           </li>
         
           <li>
-            <a href="/blog/2015/05/02/Mission-Control-沒有反應怎麼辦？/">Mission Control 沒有反應怎麼辦？</a>
+            <a href="/blog/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/">Mission Control 沒有反應怎麼辦？</a>
           </li>
         
       </ul>
@@ -216,11 +233,13 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Eason Kang<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      
+      &copy; 2026 Eason Kang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
+
     </div>
     <nav id="mobile-nav">
   
@@ -231,14 +250,22 @@
 </nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="/blog/js/jquery-3.6.4.min.js"></script>
 
 
-  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
-  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+  
+<script src="/blog/fancybox/jquery.fancybox.min.js"></script>
+
+
 
 
 <script src="/blog/js/script.js"></script>
+
+
+
+
 
   </div>
 </body>

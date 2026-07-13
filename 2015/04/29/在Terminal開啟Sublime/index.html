@@ -3,34 +3,44 @@
 <head>
   <meta charset="utf-8">
   
+  
   <title>在 Terminal 開啟 Sublime | 13筆記</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="開使用 Hexo 寫筆記以後，常常都要先 hexo new 一則文章，在用 vim 開啟他。然後問題就來了，我很多時候都要在文章裡面貼上程式碼的內容，但因為我有開啟 vim 的自動縮排功能，直接貼上去後，程式碼就會被縮排縮到找不到內文，自作孽啊… 囧rz
-就因為這樣我想找個類似 UltraEdit 的軟體來用，然後聽說 Sublime 似乎不錯，但每次開啟 Hexo 的 Markdown 檔案都要">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="開使用 Hexo 寫筆記以後，常常都要先 hexo new 一則文章，在用 vim 開啟他。然後問題就來了，我很多時候都要在文章裡面貼上程式碼的內容，但因為我有開啟 vim 的自動縮排功能，直接貼上去後，程式碼就會被縮排縮到找不到內文，自作孽啊… 囧rz 就因為這樣我想找個類似 UltraEdit 的軟體來用，然後聽說 Sublime 似乎不錯，但每次開啟 Hexo 的 Markdown 檔案都要">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在 Terminal 開啟 Sublime">
-<meta property="og:url" content="http://yiskang.github.io/blog/2015/04/29/在Terminal開啟Sublime/index.html">
+<meta property="og:url" content="http://yiskang.github.io/blog/2015/04/29/%E5%9C%A8Terminal%E9%96%8B%E5%95%9FSublime/index.html">
 <meta property="og:site_name" content="13筆記">
-<meta property="og:description" content="開使用 Hexo 寫筆記以後，常常都要先 hexo new 一則文章，在用 vim 開啟他。然後問題就來了，我很多時候都要在文章裡面貼上程式碼的內容，但因為我有開啟 vim 的自動縮排功能，直接貼上去後，程式碼就會被縮排縮到找不到內文，自作孽啊… 囧rz
-就因為這樣我想找個類似 UltraEdit 的軟體來用，然後聽說 Sublime 似乎不錯，但每次開啟 Hexo 的 Markdown 檔案都要">
-<meta property="og:updated_time" content="2017-01-15T09:46:56.000Z">
+<meta property="og:description" content="開使用 Hexo 寫筆記以後，常常都要先 hexo new 一則文章，在用 vim 開啟他。然後問題就來了，我很多時候都要在文章裡面貼上程式碼的內容，但因為我有開啟 vim 的自動縮排功能，直接貼上去後，程式碼就會被縮排縮到找不到內文，自作孽啊… 囧rz 就因為這樣我想找個類似 UltraEdit 的軟體來用，然後聽說 Sublime 似乎不錯，但每次開啟 Hexo 的 Markdown 檔案都要">
+<meta property="og:locale">
+<meta property="article:published_time" content="2015-04-29T17:14:54.000Z">
+<meta property="article:modified_time" content="2026-07-13T03:31:00.655Z">
+<meta property="article:author" content="Eason Kang">
+<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在 Terminal 開啟 Sublime">
-<meta name="twitter:description" content="開使用 Hexo 寫筆記以後，常常都要先 hexo new 一則文章，在用 vim 開啟他。然後問題就來了，我很多時候都要在文章裡面貼上程式碼的內容，但因為我有開啟 vim 的自動縮排功能，直接貼上去後，程式碼就會被縮排縮到找不到內文，自作孽啊… 囧rz
-就因為這樣我想找個類似 UltraEdit 的軟體來用，然後聽說 Sublime 似乎不錯，但每次開啟 Hexo 的 Markdown 檔案都要">
   
-    <link rel="alternate" href="/atom.xml" title="13筆記" type="application/atom+xml">
+    <link rel="alternate" href="/blog/atom.xml" title="13筆記" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="shortcut icon" href="/blog/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/blog/css/style.css">
-  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
-</head>
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
   <div id="container">
@@ -46,7 +56,7 @@
     </div>
     <div id="header-inner" class="inner">
       <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
         
           <a class="main-nav-link" href="/blog/">Home</a>
         
@@ -55,21 +65,23 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+          <a class="nav-icon" href="/blog/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yiskang.github.io/blog"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yiskang.github.io/blog"></form>
       </div>
     </div>
   </div>
 </header>
+
       <div class="outer">
-        <section id="main"><article id="post-在Terminal開啟Sublime" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-在Terminal開啟Sublime" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/blog/2015/04/29/在Terminal開啟Sublime/" class="article-date">
-  <time datetime="2015-04-29T09:14:54.000Z" itemprop="datePublished">2015-04-29</time>
+    <a href="/blog/2015/04/29/%E5%9C%A8Terminal%E9%96%8B%E5%95%9FSublime/" class="article-date">
+  <time class="dt-published" datetime="2015-04-29T17:14:54.000Z" itemprop="datePublished">2015-04-29</time>
 </a>
     
   <div class="article-category">
@@ -83,37 +95,40 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
+    <h1 class="p-name article-title" itemprop="headline name">
       在 Terminal 開啟 Sublime
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <p>開使用 Hexo 寫筆記以後，常常都要先 hexo new 一則文章，在用 vim 開啟他。然後問題就來了，我很多時候都要在文章裡面貼上程式碼的內容，但因為我有開啟 vim 的自動縮排功能，直接貼上去後，程式碼就會被縮排縮到找不到內文，自作孽啊… 囧rz</p>
 <p>就因為這樣我想找個類似 UltraEdit 的軟體來用，然後聽說 Sublime 似乎不錯，但每次開啟 Hexo 的 Markdown 檔案都要做拖拉的動作，這時候我的懶毛病就犯了！好我想讓 Sublime 跟 vim 一樣可以直接在 Terminal 開啟文章的 md 檔，那要怎麼做呢？以下就是我所做的設定：</p>
 <ol>
-<li><p>先測試可不可以直接啟動 Sublime</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl</div></pre></td></tr></table></figure>
-</li>
-<li><p>如果可以的話，現在為 Sublime 建立一個 alias：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">alias</span> sublime=<span class="string">"/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>然後把他加到 shell 的 rc 檔裡面，以下以 zsh 為例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">echo</span> <span class="string">'alias sublime="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"'</span> &gt; ~/.zshrc</div><div class="line">$ <span class="built_in">source</span> ~/.zshrc</div></pre></td></tr></table></figure>
-</li>
+<li>先測試可不可以直接啟動 Sublime</li>
 </ol>
-<p>Reference: <a href="http://azyukei.github.io/2015/04/Sublime-Text-OSX-Terminal-Launch/" target="_blank" rel="external">在 Terminal 啟動 Sublime Text</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>如果可以的話，現在為 Sublime 建立一個 alias：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> sublime=<span class="string">&quot;/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl&quot;</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>然後把他加到 shell 的 rc 檔裡面，以下以 zsh 為例：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;alias sublime=&quot;/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl&quot;&#x27;</span> &gt; ~/.zshrc</span><br><span class="line">$ <span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>Reference: <a href="http://azyukei.github.io/2015/04/Sublime-Text-OSX-Terminal-Launch/">在 Terminal 啟動 Sublime Text</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yiskang.github.io/blog/blog/2015/04/29/在Terminal開啟Sublime/" data-id="cixyhmykw000aiex7nkl0qomq" class="article-share-link">Share</a>
+      <a data-url="http://yiskang.github.io/blog/2015/04/29/%E5%9C%A8Terminal%E9%96%8B%E5%95%9FSublime/" data-id="cuidTtJOfn5dOMLeH7G5Q_EyN" data-title="在 Terminal 開啟 Sublime" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Hexo/">Hexo</a></li></ul>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Hexo/" rel="tag">Hexo</a></li></ul>
 
     </footer>
   </div>
@@ -121,8 +136,8 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/2015/05/02/Mission-Control-沒有反應怎麼辦？/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+    <a href="/blog/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
       <div class="article-nav-title">
         
           Mission Control 沒有反應怎麼辦？
@@ -132,7 +147,7 @@
   
   
     <a href="/blog/2015/04/16/git-submodule/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Älter</strong>
       <div class="article-nav-title">git submodule 介紹</div>
     </a>
   
@@ -141,13 +156,14 @@
   
 </article>
 
+
 </section>
         
           <aside id="sidebar">
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Kategorien</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/">Tech</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/BIM/">BIM</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/Mac-OS/">Mac OS</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/OS-X/">OS X</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/Windows/">Windows</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/iOS/">iOS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/iOS/UI/">UI</a></li></ul></li></ul></li></ul>
     </div>
@@ -159,7 +175,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OS-X/">OS X</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Objective-C/">Objective-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Plugin/">Plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Revit/">Revit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/UI/">UI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/iOS/">iOS</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OS-X/" rel="tag">OS X</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Objective-C/" rel="tag">Objective-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Plugin/" rel="tag">Plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Revit/" rel="tag">Revit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Swift/" rel="tag">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/UI/" rel="tag">UI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/iOS/" rel="tag">iOS</a></li></ul>
     </div>
   </div>
 
@@ -176,7 +192,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/04/">April 2015</a></li></ul>
     </div>
@@ -186,12 +202,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List、Combobox-by-Swift/">iOS Pulldown List(Dropdown List、Combobox) by Swift</a>
+            <a href="/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List%E3%80%81Combobox-by-Swift/">iOS Pulldown List(Dropdown List、Combobox) by Swift</a>
           </li>
         
           <li>
@@ -207,7 +223,7 @@
           </li>
         
           <li>
-            <a href="/blog/2015/05/02/Mission-Control-沒有反應怎麼辦？/">Mission Control 沒有反應怎麼辦？</a>
+            <a href="/blog/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/">Mission Control 沒有反應怎麼辦？</a>
           </li>
         
       </ul>
@@ -222,11 +238,13 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Eason Kang<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      
+      &copy; 2026 Eason Kang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
+
     </div>
     <nav id="mobile-nav">
   
@@ -237,14 +255,22 @@
 </nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="/blog/js/jquery-3.6.4.min.js"></script>
 
 
-  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
-  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+  
+<script src="/blog/fancybox/jquery.fancybox.min.js"></script>
+
+
 
 
 <script src="/blog/js/script.js"></script>
+
+
+
+
 
   </div>
 </body>

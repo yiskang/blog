@@ -3,34 +3,44 @@
 <head>
   <meta charset="utf-8">
   
+  
   <title>Mission Control 沒有反應怎麼辦？ | 13筆記</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近變的很不愛關電腦，常常螢幕一蓋就收到包包裡了。但久沒有重開機，有些應用程式就會不乖，突然沒有反應了，像這次不乖的就是 Mission Control。它掛掉的當下，我剛好在用 Evernote 語音記事記錄演討會的內容，沒辦法重開機，非常囧！！！還好 Mission Control 可以在不重開機的狀態下重開，以下是我使用的方法，供大家參考！（當然在使用前必需先開起 Terminal ～）
-比">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="最近變的很不愛關電腦，常常螢幕一蓋就收到包包裡了。但久沒有重開機，有些應用程式就會不乖，突然沒有反應了，像這次不乖的就是 Mission Control。它掛掉的當下，我剛好在用 Evernote 語音記事記錄演討會的內容，沒辦法重開機，非常囧！！！還好 Mission Control 可以在不重開機的狀態下重開，以下是我使用的方法，供大家參考！（當然在使用前必需先開起 Terminal ～） 比">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mission Control 沒有反應怎麼辦？">
-<meta property="og:url" content="http://yiskang.github.io/blog/2015/05/02/Mission-Control-沒有反應怎麼辦？/index.html">
+<meta property="og:url" content="http://yiskang.github.io/blog/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/index.html">
 <meta property="og:site_name" content="13筆記">
-<meta property="og:description" content="最近變的很不愛關電腦，常常螢幕一蓋就收到包包裡了。但久沒有重開機，有些應用程式就會不乖，突然沒有反應了，像這次不乖的就是 Mission Control。它掛掉的當下，我剛好在用 Evernote 語音記事記錄演討會的內容，沒辦法重開機，非常囧！！！還好 Mission Control 可以在不重開機的狀態下重開，以下是我使用的方法，供大家參考！（當然在使用前必需先開起 Terminal ～）
-比">
-<meta property="og:updated_time" content="2016-09-01T07:58:05.000Z">
+<meta property="og:description" content="最近變的很不愛關電腦，常常螢幕一蓋就收到包包裡了。但久沒有重開機，有些應用程式就會不乖，突然沒有反應了，像這次不乖的就是 Mission Control。它掛掉的當下，我剛好在用 Evernote 語音記事記錄演討會的內容，沒辦法重開機，非常囧！！！還好 Mission Control 可以在不重開機的狀態下重開，以下是我使用的方法，供大家參考！（當然在使用前必需先開起 Terminal ～） 比">
+<meta property="og:locale">
+<meta property="article:published_time" content="2015-05-02T09:49:33.000Z">
+<meta property="article:modified_time" content="2026-07-13T03:31:00.655Z">
+<meta property="article:author" content="Eason Kang">
+<meta property="article:tag" content="OS X">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mission Control 沒有反應怎麼辦？">
-<meta name="twitter:description" content="最近變的很不愛關電腦，常常螢幕一蓋就收到包包裡了。但久沒有重開機，有些應用程式就會不乖，突然沒有反應了，像這次不乖的就是 Mission Control。它掛掉的當下，我剛好在用 Evernote 語音記事記錄演討會的內容，沒辦法重開機，非常囧！！！還好 Mission Control 可以在不重開機的狀態下重開，以下是我使用的方法，供大家參考！（當然在使用前必需先開起 Terminal ～）
-比">
   
-    <link rel="alternate" href="/atom.xml" title="13筆記" type="application/atom+xml">
+    <link rel="alternate" href="/blog/atom.xml" title="13筆記" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="shortcut icon" href="/blog/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/blog/css/style.css">
-  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
-</head>
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
   <div id="container">
@@ -46,7 +56,7 @@
     </div>
     <div id="header-inner" class="inner">
       <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
         
           <a class="main-nav-link" href="/blog/">Home</a>
         
@@ -55,21 +65,23 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+          <a class="nav-icon" href="/blog/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yiskang.github.io/blog"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yiskang.github.io/blog"></form>
       </div>
     </div>
   </div>
 </header>
+
       <div class="outer">
-        <section id="main"><article id="post-Mission-Control-沒有反應怎麼辦？" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Mission-Control-沒有反應怎麼辦？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/blog/2015/05/02/Mission-Control-沒有反應怎麼辦？/" class="article-date">
-  <time datetime="2015-05-02T01:49:33.000Z" itemprop="datePublished">2015-05-02</time>
+    <a href="/blog/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/" class="article-date">
+  <time class="dt-published" datetime="2015-05-02T09:49:33.000Z" itemprop="datePublished">2015-05-02</time>
 </a>
     
   <div class="article-category">
@@ -83,27 +95,29 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
+    <h1 class="p-name article-title" itemprop="headline name">
       Mission Control 沒有反應怎麼辦？
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <p>最近變的很不愛關電腦，常常螢幕一蓋就收到包包裡了。但久沒有重開機，有些應用程式就會不乖，突然沒有反應了，像這次不乖的就是 Mission Control。它掛掉的當下，我剛好在用 Evernote 語音記事記錄演討會的內容，沒辦法重開機，非常囧！！！還好 Mission Control 可以在不重開機的狀態下重開，以下是我使用的方法，供大家參考！（當然在使用前必需先開起 Terminal ～）</p>
-<h3 id="比較暴力的作法"><a href="#比較暴力的作法" class="headerlink" title="比較暴力的作法"></a>比較暴力的作法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ killall Dock</div></pre></td></tr></table></figure>
-<h3 id="溫柔的作法"><a href="#溫柔的作法" class="headerlink" title="溫柔的作法"></a>溫柔的作法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ osascript <span class="_">-e</span> <span class="string">'quit application "Dock"'</span></div></pre></td></tr></table></figure>
-<p>Reference: <a href="http://hints.macworld.com/article.php?story=20110802073945173" target="_blank" rel="external">10.7: Restart Mission Control</a></p>
+<h3 id="比較暴力的作法"><a href="#比較暴力的作法" class="headerlink" title="比較暴力的作法"></a>比較暴力的作法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ killall Dock</span><br></pre></td></tr></table></figure>
+
+<h3 id="溫柔的作法"><a href="#溫柔的作法" class="headerlink" title="溫柔的作法"></a>溫柔的作法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ osascript -e <span class="string">&#x27;quit application &quot;Dock&quot;&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>Reference: <a href="http://hints.macworld.com/article.php?story=20110802073945173">10.7: Restart Mission Control</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yiskang.github.io/blog/blog/2015/05/02/Mission-Control-沒有反應怎麼辦？/" data-id="cixyhmyk70000iex7ptm8ghah" class="article-share-link">Share</a>
+      <a data-url="http://yiskang.github.io/blog/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/" data-id="cuid7zeaU-F952Kw1-1xOFGWp" data-title="Mission Control 沒有反應怎麼辦？" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/OS-X/">OS X</a></li></ul>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/OS-X/" rel="tag">OS X</a></li></ul>
 
     </footer>
   </div>
@@ -112,7 +126,7 @@
 <nav id="article-nav">
   
     <a href="/blog/2015/05/06/Revit-debugging-on-Visual-Studio-2013/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Neuer</strong>
       <div class="article-nav-title">
         
           Revit debugging on Visual Studio 2013
@@ -121,8 +135,8 @@
     </a>
   
   
-    <a href="/blog/2015/04/29/在Terminal開啟Sublime/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+    <a href="/blog/2015/04/29/%E5%9C%A8Terminal%E9%96%8B%E5%95%9FSublime/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
       <div class="article-nav-title">在 Terminal 開啟 Sublime</div>
     </a>
   
@@ -131,13 +145,14 @@
   
 </article>
 
+
 </section>
         
           <aside id="sidebar">
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Kategorien</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/">Tech</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/BIM/">BIM</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/Mac-OS/">Mac OS</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/OS-X/">OS X</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/Windows/">Windows</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/iOS/">iOS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/iOS/UI/">UI</a></li></ul></li></ul></li></ul>
     </div>
@@ -149,7 +164,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OS-X/">OS X</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Objective-C/">Objective-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Plugin/">Plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Revit/">Revit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/UI/">UI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/iOS/">iOS</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OS-X/" rel="tag">OS X</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Objective-C/" rel="tag">Objective-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Plugin/" rel="tag">Plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Revit/" rel="tag">Revit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Swift/" rel="tag">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/UI/" rel="tag">UI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/iOS/" rel="tag">iOS</a></li></ul>
     </div>
   </div>
 
@@ -166,7 +181,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/04/">April 2015</a></li></ul>
     </div>
@@ -176,12 +191,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List、Combobox-by-Swift/">iOS Pulldown List(Dropdown List、Combobox) by Swift</a>
+            <a href="/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List%E3%80%81Combobox-by-Swift/">iOS Pulldown List(Dropdown List、Combobox) by Swift</a>
           </li>
         
           <li>
@@ -197,7 +212,7 @@
           </li>
         
           <li>
-            <a href="/blog/2015/05/02/Mission-Control-沒有反應怎麼辦？/">Mission Control 沒有反應怎麼辦？</a>
+            <a href="/blog/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/">Mission Control 沒有反應怎麼辦？</a>
           </li>
         
       </ul>
@@ -212,11 +227,13 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Eason Kang<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      
+      &copy; 2026 Eason Kang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
+
     </div>
     <nav id="mobile-nav">
   
@@ -227,14 +244,22 @@
 </nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="/blog/js/jquery-3.6.4.min.js"></script>
 
 
-  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
-  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+  
+<script src="/blog/fancybox/jquery.fancybox.min.js"></script>
+
+
 
 
 <script src="/blog/js/script.js"></script>
+
+
+
+
 
   </div>
 </body>

@@ -1,184 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>13筆記</title>
-  
-  <link href="/blog/atom.xml" rel="self"/>
-  
-  <link href="http://yiskang.github.io/blog/"/>
-  <updated>2017-01-15T09:53:01.000Z</updated>
-  <id>http://yiskang.github.io/blog/</id>
-  
   <author>
     <name>Eason Kang</name>
     <email>M9805508@mail.ntust.edu.tw</email>
   </author>
-  
-  <generator uri="http://hexo.io/">Hexo</generator>
-  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  <icon>https://www.gravatar.com/avatar/73fd8b7ba86d13a41f01272d20591091</icon>
+  <id>http://yiskang.github.io/blog/</id>
+  <link href="http://yiskang.github.io/blog/" rel="alternate"/>
+  <link href="http://yiskang.github.io/blog/atom.xml" rel="self"/>
+  <rights>All rights reserved 2026, Eason Kang</rights>
+  <title>13筆記</title>
+  <updated>2026-07-13T03:31:00.655Z</updated>
   <entry>
-    <title>iOS Pulldown List(Dropdown List、Combobox) by Swift</title>
+    <author>
+      <name>Eason Kang</name>
+      <email>M9805508@mail.ntust.edu.tw</email>
+    </author>
+    <category term="Tech" scheme="http://yiskang.github.io/blog/categories/Tech/"/>
+    <category term="iOS" scheme="http://yiskang.github.io/blog/categories/Tech/iOS/"/>
+    <category term="UI" scheme="http://yiskang.github.io/blog/categories/Tech/iOS/UI/"/>
+    <category term="iOS" scheme="http://yiskang.github.io/blog/tags/iOS/"/>
+    <category term="Swift" scheme="http://yiskang.github.io/blog/tags/Swift/"/>
+    <category term="Objective-C" scheme="http://yiskang.github.io/blog/tags/Objective-C/"/>
+    <id>http://yiskang.github.io/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List%E3%80%81Combobox-by-Swift/</id>
     <link href="http://yiskang.github.io/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List%E3%80%81Combobox-by-Swift/"/>
-    <id>http://yiskang.github.io/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List、Combobox-by-Swift/</id>
-    <published>2015-07-17T11:30:46.000Z</published>
-    <updated>2017-01-15T09:53:01.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近因為工作的關係開始接觸 iOS SDK，Apple 官方文件算是頗齊全的，但相較於 Android 的手冊，還是略遜一疇（Google 大神還是比較有善～）。而本次目標是在 iOS 裡面新增一個簡單下拉式選單（Dropdown Menu、Pulldown Menu），憑
-    
+    <published>2015-07-17T19:30:46.000Z</published>
+    <summary>
+      <![CDATA[<p>最近因為工作的關係開始接觸 iOS SDK，Apple 官方文件算是頗齊全的，但相較於 Android 的手冊，還是略遜一疇（Google 大神還是比較有善～）。而本次目標是在 iOS 裡面新增一個簡單下拉式選單（Dropdown Menu、Pulldown Menu），憑]]>
     </summary>
-    
-      <category term="Tech" scheme="http://yiskang.github.io/blog/categories/Tech/"/>
-    
-      <category term="iOS" scheme="http://yiskang.github.io/blog/categories/Tech/iOS/"/>
-    
-      <category term="UI" scheme="http://yiskang.github.io/blog/categories/Tech/iOS/UI/"/>
-    
-    
-      <category term="iOS" scheme="http://yiskang.github.io/blog/tags/iOS/"/>
-    
-      <category term="Swift" scheme="http://yiskang.github.io/blog/tags/Swift/"/>
-    
-      <category term="Objective-C" scheme="http://yiskang.github.io/blog/tags/Objective-C/"/>
-    
+    <title>iOS Pulldown List(Dropdown List、Combobox) by Swift</title>
+    <updated>2026-07-13T03:31:00.655Z</updated>
   </entry>
-  
   <entry>
-    <title>Add UITextField on UIView Programmitically by Swift</title>
-    <link href="http://yiskang.github.io/blog/2015/07/17/Add-UITextField-on-UIView-Programmitically-by-Swift/"/>
+    <author>
+      <name>Eason Kang</name>
+      <email>M9805508@mail.ntust.edu.tw</email>
+    </author>
+    <category term="Tech" scheme="http://yiskang.github.io/blog/categories/Tech/"/>
+    <category term="iOS" scheme="http://yiskang.github.io/blog/categories/Tech/iOS/"/>
+    <category term="iOS" scheme="http://yiskang.github.io/blog/tags/iOS/"/>
+    <category term="UI" scheme="http://yiskang.github.io/blog/tags/UI/"/>
+    <category term="Swift" scheme="http://yiskang.github.io/blog/tags/Swift/"/>
     <id>http://yiskang.github.io/blog/2015/07/17/Add-UITextField-on-UIView-Programmitically-by-Swift/</id>
-    <published>2015-07-17T03:44:40.000Z</published>
-    <updated>2016-09-01T07:58:05.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;好像有點久沒有寫文章。。。&lt;/p&gt;
-&lt;p&gt;最近開始玩 iOS SDK，今天不知道哪根筋不對，突然不想用 Interface Builder 拉 UI，想直接用寫 Code 的方式生，所以我就翻了一下關方手冊，還有拜了 Google 大神！萬事起頭難，我們就先從簡單的開始吧，
-    
+    <link href="http://yiskang.github.io/blog/2015/07/17/Add-UITextField-on-UIView-Programmitically-by-Swift/"/>
+    <published>2015-07-17T11:44:40.000Z</published>
+    <summary>
+      <![CDATA[<p>好像有點久沒有寫文章。。。</p>
+<p>最近開始玩 iOS SDK，今天不知道哪根筋不對，突然不想用 Interface Builder 拉 UI，想直接用寫 Code 的方式生，所以我就翻了一下關方手冊，還有拜了 Google 大神！萬事起頭難，我們就先從簡單的開始吧，]]>
     </summary>
-    
-      <category term="Tech" scheme="http://yiskang.github.io/blog/categories/Tech/"/>
-    
-      <category term="iOS" scheme="http://yiskang.github.io/blog/categories/Tech/iOS/"/>
-    
-    
-      <category term="iOS" scheme="http://yiskang.github.io/blog/tags/iOS/"/>
-    
-      <category term="UI" scheme="http://yiskang.github.io/blog/tags/UI/"/>
-    
-      <category term="Swift" scheme="http://yiskang.github.io/blog/tags/Swift/"/>
-    
+    <title>Add UITextField on UIView Programmitically by Swift</title>
+    <updated>2026-07-13T03:31:00.655Z</updated>
   </entry>
-  
   <entry>
-    <title>Use Atlassian Source Tree embedded git in Windows</title>
-    <link href="http://yiskang.github.io/blog/2015/05/06/Use-Atlassian-Source-Tree-embedded-git-in-Windows/"/>
+    <author>
+      <name>Eason Kang</name>
+      <email>M9805508@mail.ntust.edu.tw</email>
+    </author>
+    <category term="Tech" scheme="http://yiskang.github.io/blog/categories/Tech/"/>
+    <category term="Windows" scheme="http://yiskang.github.io/blog/categories/Tech/Windows/"/>
+    <category term="Git" scheme="http://yiskang.github.io/blog/tags/Git/"/>
     <id>http://yiskang.github.io/blog/2015/05/06/Use-Atlassian-Source-Tree-embedded-git-in-Windows/</id>
-    <published>2015-05-06T10:01:09.000Z</published>
-    <updated>2017-01-15T09:53:15.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;前些日子因為要在 Mac OS X 上面安裝 Git 的圖形化管理程式，接觸了 Atlassian SourceTree 跟 Github for Mac，但由於工作上有需要使用 Atlassian Bitbucket，所以最後我選擇了 SourceTree。最近因為一些原
-    
+    <link href="http://yiskang.github.io/blog/2015/05/06/Use-Atlassian-Source-Tree-embedded-git-in-Windows/"/>
+    <published>2015-05-06T18:01:09.000Z</published>
+    <summary>
+      <![CDATA[<p>前些日子因為要在 Mac OS X 上面安裝 Git 的圖形化管理程式，接觸了 Atlassian SourceTree 跟 Github for Mac，但由於工作上有需要使用 Atlassian Bitbucket，所以最後我選擇了 SourceTree。最近因為一些原]]>
     </summary>
-    
-      <category term="Tech" scheme="http://yiskang.github.io/blog/categories/Tech/"/>
-    
-      <category term="Windows" scheme="http://yiskang.github.io/blog/categories/Tech/Windows/"/>
-    
-    
-      <category term="Git" scheme="http://yiskang.github.io/blog/tags/Git/"/>
-    
+    <title>Use Atlassian Source Tree embedded git in Windows</title>
+    <updated>2026-07-13T03:31:00.655Z</updated>
   </entry>
-  
   <entry>
-    <title>Revit debugging on Visual Studio 2013</title>
-    <link href="http://yiskang.github.io/blog/2015/05/06/Revit-debugging-on-Visual-Studio-2013/"/>
+    <author>
+      <name>Eason Kang</name>
+      <email>M9805508@mail.ntust.edu.tw</email>
+    </author>
+    <category term="Tech" scheme="http://yiskang.github.io/blog/categories/Tech/"/>
+    <category term="BIM" scheme="http://yiskang.github.io/blog/categories/Tech/BIM/"/>
+    <category term="Revit" scheme="http://yiskang.github.io/blog/tags/Revit/"/>
+    <category term="Plugin" scheme="http://yiskang.github.io/blog/tags/Plugin/"/>
     <id>http://yiskang.github.io/blog/2015/05/06/Revit-debugging-on-Visual-Studio-2013/</id>
-    <published>2015-05-06T09:56:25.000Z</published>
-    <updated>2017-01-15T09:53:27.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近萬惡的微軟（M$）突然大爆發，一直開源又將 Visual Studio 2013 Professional 釋出為 Visual Studio Community 版，免費提供大家使用。用 Visual Studio 2012 也好一陣子了，所以我想換口味試看看～ :P
-    
+    <link href="http://yiskang.github.io/blog/2015/05/06/Revit-debugging-on-Visual-Studio-2013/"/>
+    <published>2015-05-06T17:56:25.000Z</published>
+    <summary>
+      <![CDATA[<p>最近萬惡的微軟（M$）突然大爆發，一直開源又將 Visual Studio 2013 Professional 釋出為 Visual Studio Community 版，免費提供大家使用。用 Visual Studio 2012 也好一陣子了，所以我想換口味試看看～ :P]]>
     </summary>
-    
-      <category term="Tech" scheme="http://yiskang.github.io/blog/categories/Tech/"/>
-    
-      <category term="BIM" scheme="http://yiskang.github.io/blog/categories/Tech/BIM/"/>
-    
-    
-      <category term="Revit" scheme="http://yiskang.github.io/blog/tags/Revit/"/>
-    
-      <category term="Plugin" scheme="http://yiskang.github.io/blog/tags/Plugin/"/>
-    
+    <title>Revit debugging on Visual Studio 2013</title>
+    <updated>2026-07-13T03:31:00.655Z</updated>
   </entry>
-  
   <entry>
-    <title>Mission Control 沒有反應怎麼辦？</title>
+    <author>
+      <name>Eason Kang</name>
+      <email>M9805508@mail.ntust.edu.tw</email>
+    </author>
+    <category term="Tech" scheme="http://yiskang.github.io/blog/categories/Tech/"/>
+    <category term="Mac OS" scheme="http://yiskang.github.io/blog/categories/Tech/Mac-OS/"/>
+    <category term="OS X" scheme="http://yiskang.github.io/blog/tags/OS-X/"/>
+    <id>http://yiskang.github.io/blog/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/</id>
     <link href="http://yiskang.github.io/blog/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/"/>
-    <id>http://yiskang.github.io/blog/2015/05/02/Mission-Control-沒有反應怎麼辦？/</id>
-    <published>2015-05-02T01:49:33.000Z</published>
-    <updated>2016-09-01T07:58:05.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近變的很不愛關電腦，常常螢幕一蓋就收到包包裡了。但久沒有重開機，有些應用程式就會不乖，突然沒有反應了，像這次不乖的就是 Mission Control。它掛掉的當下，我剛好在用 Evernote 語音記事記錄演討會的內容，沒辦法重開機，非常囧！！！還好 Mission C
-    
+    <published>2015-05-02T09:49:33.000Z</published>
+    <summary>
+      <![CDATA[<p>最近變的很不愛關電腦，常常螢幕一蓋就收到包包裡了。但久沒有重開機，有些應用程式就會不乖，突然沒有反應了，像這次不乖的就是 Mission Control。它掛掉的當下，我剛好在用 Evernote 語音記事記錄演討會的內容，沒辦法重開機，非常囧！！！還好 Mission C]]>
     </summary>
-    
-      <category term="Tech" scheme="http://yiskang.github.io/blog/categories/Tech/"/>
-    
-      <category term="Mac OS" scheme="http://yiskang.github.io/blog/categories/Tech/Mac-OS/"/>
-    
-    
-      <category term="OS X" scheme="http://yiskang.github.io/blog/tags/OS-X/"/>
-    
+    <title>Mission Control 沒有反應怎麼辦？</title>
+    <updated>2026-07-13T03:31:00.655Z</updated>
   </entry>
-  
   <entry>
-    <title>在 Terminal 開啟 Sublime</title>
+    <author>
+      <name>Eason Kang</name>
+      <email>M9805508@mail.ntust.edu.tw</email>
+    </author>
+    <category term="Tech" scheme="http://yiskang.github.io/blog/categories/Tech/"/>
+    <category term="OS X" scheme="http://yiskang.github.io/blog/categories/Tech/OS-X/"/>
+    <category term="Hexo" scheme="http://yiskang.github.io/blog/tags/Hexo/"/>
+    <id>http://yiskang.github.io/blog/2015/04/29/%E5%9C%A8Terminal%E9%96%8B%E5%95%9FSublime/</id>
     <link href="http://yiskang.github.io/blog/2015/04/29/%E5%9C%A8Terminal%E9%96%8B%E5%95%9FSublime/"/>
-    <id>http://yiskang.github.io/blog/2015/04/29/在Terminal開啟Sublime/</id>
-    <published>2015-04-29T09:14:54.000Z</published>
-    <updated>2017-01-15T09:46:56.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;開使用 Hexo 寫筆記以後，常常都要先 hexo new 一則文章，在用 vim 開啟他。然後問題就來了，我很多時候都要在文章裡面貼上程式碼的內容，但因為我有開啟 vim 的自動縮排功能，直接貼上去後，程式碼就會被縮排縮到找不到內文，自作孽啊… 囧rz&lt;/p&gt;
-&lt;p&gt;就因
-    
+    <published>2015-04-29T17:14:54.000Z</published>
+    <summary>
+      <![CDATA[<p>開使用 Hexo 寫筆記以後，常常都要先 hexo new 一則文章，在用 vim 開啟他。然後問題就來了，我很多時候都要在文章裡面貼上程式碼的內容，但因為我有開啟 vim 的自動縮排功能，直接貼上去後，程式碼就會被縮排縮到找不到內文，自作孽啊… 囧rz</p>
+<p>就因]]>
     </summary>
-    
-      <category term="Tech" scheme="http://yiskang.github.io/blog/categories/Tech/"/>
-    
-      <category term="OS X" scheme="http://yiskang.github.io/blog/categories/Tech/OS-X/"/>
-    
-    
-      <category term="Hexo" scheme="http://yiskang.github.io/blog/tags/Hexo/"/>
-    
+    <title>在 Terminal 開啟 Sublime</title>
+    <updated>2026-07-13T03:31:00.655Z</updated>
   </entry>
-  
   <entry>
-    <title>git submodule 介紹</title>
-    <link href="http://yiskang.github.io/blog/2015/04/16/git-submodule/"/>
+    <author>
+      <name>Eason Kang</name>
+      <email>M9805508@mail.ntust.edu.tw</email>
+    </author>
+    <category term="Tech" scheme="http://yiskang.github.io/blog/categories/Tech/"/>
+    <category term="git" scheme="http://yiskang.github.io/blog/tags/git/"/>
     <id>http://yiskang.github.io/blog/2015/04/16/git-submodule/</id>
-    <published>2015-04-16T05:46:36.000Z</published>
-    <updated>2016-09-01T07:58:04.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h3&gt;&lt;p&gt;最近為了方便管理專案，將他拆成了好幾個小專案來維護，然後透過參考引入想要的檔案。但 git 沒辦法像 SVN 那樣只單獨下載一個檔案，它必需
-    
+    <link href="http://yiskang.github.io/blog/2015/04/16/git-submodule/"/>
+    <published>2015-04-16T13:46:36.000Z</published>
+    <summary>
+      <![CDATA[<h3 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h3><p>最近為了方便管理專案，將他拆成了好幾個小專案來維護，然後透過參考引入想要的檔案。但 git 沒辦法像 SVN 那樣只單獨下載一個檔案，它必需]]>
     </summary>
-    
-      <category term="Tech" scheme="http://yiskang.github.io/blog/categories/Tech/"/>
-    
-    
-      <category term="git" scheme="http://yiskang.github.io/blog/tags/git/"/>
-    
+    <title>git submodule 介紹</title>
+    <updated>2026-07-13T03:31:00.655Z</updated>
   </entry>
-  
 </feed>

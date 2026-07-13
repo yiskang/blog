@@ -3,35 +3,49 @@
 <head>
   <meta charset="utf-8">
   
+  
   <title>Revit debugging on Visual Studio 2013 | 13筆記</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="最近萬惡的微軟（M$）突然大爆發，一直開源又將 Visual Studio 2013 Professional 釋出為 Visual Studio Community 版，免費提供大家使用。用 Visual Studio 2012 也好一陣子了，所以我想換口味試看看～ :P 但裝好 2013 拿來 Debug Revit 2016 增益集（Addin）的時候，卻發現 Revit 掛掉 Crash">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Revit debugging on Visual Studio 2013">
 <meta property="og:url" content="http://yiskang.github.io/blog/2015/05/06/Revit-debugging-on-Visual-Studio-2013/index.html">
 <meta property="og:site_name" content="13筆記">
 <meta property="og:description" content="最近萬惡的微軟（M$）突然大爆發，一直開源又將 Visual Studio 2013 Professional 釋出為 Visual Studio Community 版，免費提供大家使用。用 Visual Studio 2012 也好一陣子了，所以我想換口味試看看～ :P 但裝好 2013 拿來 Debug Revit 2016 增益集（Addin）的時候，卻發現 Revit 掛掉 Crash">
+<meta property="og:locale">
 <meta property="og:image" content="http://yiskang.github.io/blog/images/RevitDebuggingError.jpg">
 <meta property="og:image" content="http://yiskang.github.io/blog/images/RevitDebuggingError2.jpg">
 <meta property="og:image" content="http://yiskang.github.io/blog/images/RevitDebuggingError3.jpg">
-<meta property="og:updated_time" content="2017-01-15T09:53:27.000Z">
+<meta property="article:published_time" content="2015-05-06T17:56:25.000Z">
+<meta property="article:modified_time" content="2026-07-13T03:31:00.655Z">
+<meta property="article:author" content="Eason Kang">
+<meta property="article:tag" content="Plugin">
+<meta property="article:tag" content="Revit">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Revit debugging on Visual Studio 2013">
-<meta name="twitter:description" content="最近萬惡的微軟（M$）突然大爆發，一直開源又將 Visual Studio 2013 Professional 釋出為 Visual Studio Community 版，免費提供大家使用。用 Visual Studio 2012 也好一陣子了，所以我想換口味試看看～ :P 但裝好 2013 拿來 Debug Revit 2016 增益集（Addin）的時候，卻發現 Revit 掛掉 Crash">
 <meta name="twitter:image" content="http://yiskang.github.io/blog/images/RevitDebuggingError.jpg">
   
-    <link rel="alternate" href="/atom.xml" title="13筆記" type="application/atom+xml">
+    <link rel="alternate" href="/blog/atom.xml" title="13筆記" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="shortcut icon" href="/blog/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/blog/css/style.css">
-  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
-</head>
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
   <div id="container">
@@ -47,7 +61,7 @@
     </div>
     <div id="header-inner" class="inner">
       <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
         
           <a class="main-nav-link" href="/blog/">Home</a>
         
@@ -56,21 +70,23 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+          <a class="nav-icon" href="/blog/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yiskang.github.io/blog"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yiskang.github.io/blog"></form>
       </div>
     </div>
   </div>
 </header>
+
       <div class="outer">
-        <section id="main"><article id="post-Revit-debugging-on-Visual-Studio-2013" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Revit-debugging-on-Visual-Studio-2013" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/blog/2015/05/06/Revit-debugging-on-Visual-Studio-2013/" class="article-date">
-  <time datetime="2015-05-06T09:56:25.000Z" itemprop="datePublished">2015-05-06</time>
+  <time class="dt-published" datetime="2015-05-06T17:56:25.000Z" itemprop="datePublished">2015-05-06</time>
 </a>
     
   <div class="article-category">
@@ -84,34 +100,48 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
+    <h1 class="p-name article-title" itemprop="headline name">
       Revit debugging on Visual Studio 2013
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <p>最近萬惡的微軟（M$）突然大爆發，一直開源又將 Visual Studio 2013 Professional 釋出為 Visual Studio Community 版，免費提供大家使用。用 Visual Studio 2012 也好一陣子了，所以我想換口味試看看～ :P 但裝好 2013 拿來 Debug Revit 2016 增益集（Addin）的時候，卻發現 Revit 掛掉 Crash 了！</p>
-<div style="width:600px;margin:0 auto;display:block;"><br><img src="images/RevitDebuggingError.jpg" alt="RevitImg"><br></div><br>所幸拜了 Google 大神後發現了解法，只要將使用除錯器的相容模式（Debugging in  Managed Compatibility Mode）就可以解決了！以下是我所做的步㵵供大家參考：<br>1. 到工具（Tools） &gt; 選項（Options），紅框所選位置：<br><div style="width:300px;margin:0 auto;display:block;"><br><img src="images/RevitDebuggingError2.jpg" alt="RevitImg"><br></div>
+<div style="width:600px;margin:0 auto;display:block;">
 
-<ol>
-<li><p>點選除錯（Debugging）項目，在點選一般（General），最後將使用相容模式（Use Managed Compatibility Mode）勾選起來，按下確認（OK）：</p>
-<div style="width:600px;margin:0 auto;display:block;"><br><img src="images/RevitDebuggingError3.jpg" alt="RevitImg"><br></div>
-</li>
-<li><p>可以開心使用 Visual Studio 2013 對 Revit 增益集進行除錯（Trace Debugging）摟～</p>
-</li>
+<p><img src="/blog/images/RevitDebuggingError.jpg" alt="RevitImg"></p>
+</div>
+所幸拜了 Google 大神後發現了解法，只要將使用除錯器的相容模式（Debugging in  Managed Compatibility Mode）就可以解決了！以下是我所做的步㵵供大家參考：
+1. 到工具（Tools） > 選項（Options），紅框所選位置：
+<div style="width:300px;margin:0 auto;display:block;">
+
+<p><img src="/blog/images/RevitDebuggingError2.jpg" alt="RevitImg"></p>
+</div>
+
+<ol start="2">
+<li>點選除錯（Debugging）項目，在點選一般（General），最後將使用相容模式（Use Managed Compatibility Mode）勾選起來，按下確認（OK）：</li>
 </ol>
-<p>Reference: <a href="http://revitlearningclub.blogspot.tw/2015/01/getting-revit-to-start-while-debugging.html" target="_blank" rel="external">Getting Revit to start while debugging API apps with Visual Studio 2013</a></p>
+<div style="width:600px;margin:0 auto;display:block;">
+
+<p><img src="/blog/images/RevitDebuggingError3.jpg" alt="RevitImg"></p>
+</div>
+
+<ol start="3">
+<li>可以開心使用 Visual Studio 2013 對 Revit 增益集進行除錯（Trace Debugging）摟～</li>
+</ol>
+<p>Reference: <a href="http://revitlearningclub.blogspot.tw/2015/01/getting-revit-to-start-while-debugging.html">Getting Revit to start while debugging API apps with Visual Studio 2013</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yiskang.github.io/blog/blog/2015/05/06/Revit-debugging-on-Visual-Studio-2013/" data-id="cixyhmykb0001iex7v28mllhx" class="article-share-link">Share</a>
+      <a data-url="http://yiskang.github.io/blog/2015/05/06/Revit-debugging-on-Visual-Studio-2013/" data-id="cuidoqnFc2wLkUM2nY7K2WFhQ" data-title="Revit debugging on Visual Studio 2013" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Plugin/">Plugin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Revit/">Revit</a></li></ul>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Plugin/" rel="tag">Plugin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Revit/" rel="tag">Revit</a></li></ul>
 
     </footer>
   </div>
@@ -120,7 +150,7 @@
 <nav id="article-nav">
   
     <a href="/blog/2015/05/06/Use-Atlassian-Source-Tree-embedded-git-in-Windows/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Neuer</strong>
       <div class="article-nav-title">
         
           Use Atlassian Source Tree embedded git in Windows
@@ -129,8 +159,8 @@
     </a>
   
   
-    <a href="/blog/2015/05/02/Mission-Control-沒有反應怎麼辦？/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+    <a href="/blog/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
       <div class="article-nav-title">Mission Control 沒有反應怎麼辦？</div>
     </a>
   
@@ -139,13 +169,14 @@
   
 </article>
 
+
 </section>
         
           <aside id="sidebar">
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Kategorien</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/">Tech</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/BIM/">BIM</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/Mac-OS/">Mac OS</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/OS-X/">OS X</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/Windows/">Windows</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/iOS/">iOS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/iOS/UI/">UI</a></li></ul></li></ul></li></ul>
     </div>
@@ -157,7 +188,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OS-X/">OS X</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Objective-C/">Objective-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Plugin/">Plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Revit/">Revit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/UI/">UI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/iOS/">iOS</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OS-X/" rel="tag">OS X</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Objective-C/" rel="tag">Objective-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Plugin/" rel="tag">Plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Revit/" rel="tag">Revit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Swift/" rel="tag">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/UI/" rel="tag">UI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/iOS/" rel="tag">iOS</a></li></ul>
     </div>
   </div>
 
@@ -174,7 +205,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/04/">April 2015</a></li></ul>
     </div>
@@ -184,12 +215,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List、Combobox-by-Swift/">iOS Pulldown List(Dropdown List、Combobox) by Swift</a>
+            <a href="/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List%E3%80%81Combobox-by-Swift/">iOS Pulldown List(Dropdown List、Combobox) by Swift</a>
           </li>
         
           <li>
@@ -205,7 +236,7 @@
           </li>
         
           <li>
-            <a href="/blog/2015/05/02/Mission-Control-沒有反應怎麼辦？/">Mission Control 沒有反應怎麼辦？</a>
+            <a href="/blog/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/">Mission Control 沒有反應怎麼辦？</a>
           </li>
         
       </ul>
@@ -220,11 +251,13 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Eason Kang<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      
+      &copy; 2026 Eason Kang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
+
     </div>
     <nav id="mobile-nav">
   
@@ -235,14 +268,22 @@
 </nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="/blog/js/jquery-3.6.4.min.js"></script>
 
 
-  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
-  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+  
+<script src="/blog/fancybox/jquery.fancybox.min.js"></script>
+
+
 
 
 <script src="/blog/js/script.js"></script>
+
+
+
+
 
   </div>
 </body>

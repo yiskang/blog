@@ -3,27 +3,39 @@
 <head>
   <meta charset="utf-8">
   
+  
   <title>13筆記</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta property="og:type" content="website">
 <meta property="og:title" content="13筆記">
 <meta property="og:url" content="http://yiskang.github.io/blog/index.html">
 <meta property="og:site_name" content="13筆記">
+<meta property="og:locale">
+<meta property="article:author" content="Eason Kang">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="13筆記">
   
-    <link rel="alternate" href="/atom.xml" title="13筆記" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
+    <link rel="alternate" href="/blog/atom.xml" title="13筆記" type="application/atom+xml">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/blog/favicon.png">
   
-  <link rel="stylesheet" href="/blog/css/style.css">
   
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
-</head>
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
   <div id="container">
@@ -39,7 +51,7 @@
     </div>
     <div id="header-inner" class="inner">
       <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
         
           <a class="main-nav-link" href="/blog/">Home</a>
         
@@ -48,23 +60,25 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+          <a class="nav-icon" href="/blog/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yiskang.github.io/blog"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yiskang.github.io/blog"></form>
       </div>
     </div>
   </div>
 </header>
+
       <div class="outer">
         <section id="main">
   
-    <article id="post-iOS-Pulldown-List-Dropdown-List、Combobox-by-Swift" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-iOS-Pulldown-List-Dropdown-List、Combobox-by-Swift" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List、Combobox-by-Swift/" class="article-date">
-  <time datetime="2015-07-17T11:30:46.000Z" itemprop="datePublished">2015-07-17</time>
+    <a href="/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List%E3%80%81Combobox-by-Swift/" class="article-date">
+  <time class="dt-published" datetime="2015-07-17T19:30:46.000Z" itemprop="datePublished">2015-07-17</time>
 </a>
     
   <div class="article-category">
@@ -79,76 +93,126 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List、Combobox-by-Swift/">iOS Pulldown List(Dropdown List、Combobox) by Swift</a>
+      <a class="p-name article-title" href="/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List%E3%80%81Combobox-by-Swift/">iOS Pulldown List(Dropdown List、Combobox) by Swift</a>
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <p>最近因為工作的關係開始接觸 iOS SDK，Apple 官方文件算是頗齊全的，但相較於 Android 的手冊，還是略遜一疇（Google 大神還是比較有善～）。而本次目標是在 iOS 裡面新增一個簡單下拉式選單（Dropdown Menu、Pulldown Menu），憑著之前新增元件的經驗，我開始在 Xcode Object Library 裡搜尋下拉選單，但不管我打 Dropdown、Pulldown，還是 Combobox 就是沒有！！！一向帶給人有善印象的 Apple 咬一口，居然沒有提供下拉選單這種元件，不會要自己刻吧，崩潰。。。</p>
-<p>還好現在第三方社群很發達，大家都很 Nice！拜了幾輪 Google 大神後，大神給了指示，原來在 iOS 裡下拉選單需要用 <a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextField_Class" target="_blank" rel="external">UITextField</a> 這個元件來改造，然後再加上一些其他元件完成選單的內容。選單的製作 Google 大神給了我兩個答案，一個是透過修改 UITextField InputView，另一個是使用 <a href="https://github.com/skywinder/ActionSheetPicker-3.0" target="_blank" rel="external">ActionSheetPicker-3.0</a>，以下將一一介紹：</p>
-<h3 id="方法一：修改-UITextField-InputView（Ref"><a href="#方法一：修改-UITextField-InputView（Ref" class="headerlink" title="方法一：修改 UITextField InputView（Ref.)"></a>方法一：修改 UITextField InputView（<a href="https://github.com/Darkseal/DownPicker" target="_blank" rel="external">Ref.</a>)</h3><ol>
-<li>首先在目標 ViewController 裡面新增幾個成員變數。<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ViewController</span>: <span class="title">UIViewController</span> </span>&#123;</div><div class="line">        <span class="comment">//UITextField 的 Reference Outlet 變數</span></div><div class="line">        <span class="meta">@IBOutlet</span> <span class="keyword">weak</span> <span class="keyword">var</span> textField: <span class="type">UITextField</span>!</div><div class="line"></div><div class="line">        <span class="comment">//選單元件</span></div><div class="line">        <span class="keyword">private</span> <span class="keyword">var</span> pickerView: <span class="type">UIPickerView</span>!;</div><div class="line"></div><div class="line">        <span class="comment">//下拉選單的內容</span></div><div class="line">        <span class="keyword">private</span> <span class="keyword">var</span> dataArray: <span class="type">NSArray</span>!;</div><div class="line">        。。。。。</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<p>還好現在第三方社群很發達，大家都很 Nice！拜了幾輪 Google 大神後，大神給了指示，原來在 iOS 裡下拉選單需要用 <a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextField_Class">UITextField</a> 這個元件來改造，然後再加上一些其他元件完成選單的內容。選單的製作 Google 大神給了我兩個答案，一個是透過修改 UITextField InputView，另一個是使用 <a href="https://github.com/skywinder/ActionSheetPicker-3.0">ActionSheetPicker-3.0</a>，以下將一一介紹：</p>
+<h3 id="方法一：修改-UITextField-InputView（Ref"><a href="#方法一：修改-UITextField-InputView（Ref" class="headerlink" title="方法一：修改 UITextField InputView（Ref.)"></a>方法一：修改 UITextField InputView（<a href="https://github.com/Darkseal/DownPicker">Ref.</a>)</h3><ol>
+<li>首先在目標 ViewController 裡面新增幾個成員變數。</li>
 </ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ViewController</span>: <span class="title class_ inherited__">UIViewController</span> &#123;</span><br><span class="line">        <span class="comment">//UITextField 的 Reference Outlet 變數</span></span><br><span class="line">        <span class="keyword">@IBOutlet</span> <span class="keyword">weak</span> <span class="keyword">var</span> textField: <span class="type">UITextField</span>!</span><br><span class="line"></span><br><span class="line">        <span class="comment">//選單元件</span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">var</span> pickerView: <span class="type">UIPickerView</span>!;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//下拉選單的內容</span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">var</span> dataArray: <span class="type">NSArray</span>!;</span><br><span class="line">        <span class="operator">。。。。。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>記得到 Storyboard 裡將Reference Outlet 變數與元件建立連結。</p>
-<ol>
-<li><p>在 ViewController 的 viewDidLoad() 裡改造 UITextField，現在先將它看起來像下拉選單（新增下拉符號）。</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</div><div class="line">        。。。。。</div><div class="line">        <span class="comment">//指定下拉符號圖片</span></div><div class="line">        <span class="keyword">var</span> img = <span class="type">UIImage</span>(named: <span class="string">"dwn"</span>)</div><div class="line">        <span class="keyword">self</span>.textField.rightView = <span class="type">UIImageView</span>(image: img)</div><div class="line"></div><div class="line">        <span class="comment">//設定圖片填滿右視圖</span></div><div class="line">        <span class="keyword">self</span>.textField.rightView!.contentMode = <span class="type">UIViewContentMode</span>.<span class="type">ScaleAspectFit</span></div><div class="line">        <span class="keyword">self</span>.textField.rightView!.clipsToBounds = <span class="literal">true</span></div><div class="line"></div><div class="line">        <span class="comment">//顯示下拉符號</span></div><div class="line">        <span class="keyword">self</span>.textField.rightViewMode = <span class="type">UITextFieldViewMode</span>.<span class="type">Always</span></div><div class="line"></div><div class="line">        <span class="comment">//建立委托</span></div><div class="line">        <span class="keyword">self</span>.textField.delegate = <span class="keyword">self</span></div><div class="line">        。。。。</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>再來在 ViewController 裡新增兩個 function ，一個用來建立選單元件（使用 UIPickerView 及 Toolbar），一個用來告知 iOS 使用者已經完成選擇。</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//新增選單元件</span></div><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">showPicker</span><span class="params">()</span></span> &#123;</div><div class="line">      <span class="comment">//使用 UIPickerView 做為選擇器</span></div><div class="line">      <span class="keyword">self</span>.pickerView = <span class="type">UIPickerView</span>()</div><div class="line"></div><div class="line">      <span class="comment">//顯示目前選擇指標</span></div><div class="line">      <span class="keyword">self</span>.pickerView.showSelectionIndicator = <span class="literal">true</span></div><div class="line"></div><div class="line">      <span class="comment">//指定資料來源與委托</span></div><div class="line">      <span class="keyword">self</span>.pickerView.dataSource = <span class="keyword">self</span></div><div class="line">      <span class="keyword">self</span>.pickerView.delegate = <span class="keyword">self</span></div><div class="line"></div><div class="line">      <span class="comment">//使用 UIToolbar 建立選單元件與外觀</span></div><div class="line">      <span class="keyword">var</span> toolbar = <span class="type">UIToolbar</span>()</div><div class="line">      toolbar.barStyle = <span class="type">UIBarStyle</span>.<span class="type">Default</span></div><div class="line">      toolbar.sizeToFit()</div><div class="line">      </div><div class="line">      <span class="comment">//新增完成選擇（Done）按鈕</span></div><div class="line">      <span class="keyword">var</span> doneButton = <span class="type">UIBarButtonItem</span>(title: <span class="string">"Done"</span>, style: <span class="type">UIBarButtonItemStyle</span>.<span class="type">Done</span>, target: <span class="keyword">self</span>, action: <span class="string">"doneClicked"</span>)</div><div class="line"></div><div class="line">      <span class="comment">//讓按鈕靠右對齊的元件</span></div><div class="line">      <span class="keyword">var</span> flexibleSpace = <span class="type">UIBarButtonItem</span>(barButtonSystemItem: <span class="type">UIBarButtonSystemItem</span>.<span class="type">FlexibleSpace</span>, target: <span class="literal">nil</span>, action: <span class="literal">nil</span>)</div><div class="line"></div><div class="line">      <span class="comment">//將元件放到 toolbar 裡面</span></div><div class="line">      toolbar.setItems([flexibleSpace, doneButton], animated: <span class="literal">true</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//使用者點擊成選擇（Done）按鈕後的動作</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">doneClicked</span><span class="params">()</span></span> &#123;</div><div class="line">      <span class="comment">//隱藏選單</span></div><div class="line">      <span class="keyword">self</span>.textField.resignFirstResponder()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>最後建立使用者與 UITextField 和 UIPickerView 的互動事件，以及設定 UIPickerView 的選項資料。</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ViewController</span>: <span class="title">UIViewController</span>, <span class="title">UITextFieldDelegate</span>, <span class="title">UIPickerViewDataSource</span>, <span class="title">UIPickerViewDelegate</span> </span>&#123;</div><div class="line">        。。。。。</div><div class="line">        <span class="comment">//點擊 textField 的時候出現選單</span></div><div class="line">        <span class="function"><span class="keyword">func</span> <span class="title">textFieldShouldBeginEditing</span><span class="params">(textField: UITextField)</span></span> -&gt; <span class="type">Bool</span> &#123;</div><div class="line">              <span class="comment">//沒有資料的時候不顯示選單</span></div><div class="line">              <span class="keyword">if</span> <span class="keyword">self</span>.dataArray != <span class="literal">nil</span> &amp;&amp; <span class="keyword">self</span>.dataArray.<span class="built_in">count</span> &gt; <span class="number">0</span> &#123;</div><div class="line">                    <span class="keyword">self</span>.showPicker(textField)</div><div class="line">                    <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">              &#125;</div><div class="line">              <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//不讓使用者透過建盤輸入文字</span></div><div class="line">        <span class="function"><span class="keyword">func</span> <span class="title">textField</span><span class="params">(textField: UITextField, shouldChangedCharactersInRange range: NSRange, replacementString string: String)</span></span> &#123;</div><div class="line">              <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//設定選單項目的列數，例如時間 (小時：分鐘) 的 pickerView 就是 return 2</span></div><div class="line">        <span class="function"><span class="keyword">func</span> <span class="title">numberOfComponentInPickerView</span><span class="params">(pickerView: UIPickerView)</span></span> -&gt; <span class="type">Int</span> &#123;</div><div class="line">              <span class="keyword">return</span> <span class="number">1</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//設定選單選項的數量</span></div><div class="line">        <span class="function"><span class="keyword">func</span> <span class="title">pickerView</span><span class="params">(pickerView: UIPickerView, numberOfRowsInComponent component: Int)</span></span> -&gt; <span class="type">Int</span> &#123;</div><div class="line">              <span class="keyword">return</span> <span class="keyword">self</span>.dataArray.<span class="built_in">count</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//設定選單項目</span></div><div class="line">        <span class="function"><span class="keyword">func</span> <span class="title">pickerView</span><span class="params">(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int)</span></span> -&gt; <span class="type">String</span>! &#123;</div><div class="line">              <span class="keyword">return</span> <span class="keyword">self</span>.dataArray[row] <span class="keyword">as</span>! <span class="type">String</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//當選單被滑動（Sliding）的時候，改變 textField 的值</span></div><div class="line">        <span class="function"><span class="keyword">func</span> <span class="title">pickerView</span><span class="params">(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)</span></span> &#123;</div><div class="line">              <span class="keyword">self</span>.textField.text = <span class="keyword">self</span>.dataArray[row] <span class="keyword">as</span>! <span class="type">String</span></div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<ol start="2">
+<li>在 ViewController 的 viewDidLoad() 裡改造 UITextField，現在先將它看起來像下拉選單（新增下拉符號）。</li>
 </ol>
-<h3 id="方法二：使用-ActionSheetPicker-3-0"><a href="#方法二：使用-ActionSheetPicker-3-0" class="headerlink" title="方法二：使用 ActionSheetPicker-3.0"></a>方法二：使用 ActionSheetPicker-3.0</h3><p><a href="https://github.com/skywinder/ActionSheetPicker-3.0" target="_blank" rel="external">ActionSheetPicker-3.0</a> 這個元件是 <a href="https://github.com/skywinder" target="_blank" rel="external">Petr Korolev</a> 這個好心人用 Objective-C 寫的，但我的專案目標語言是 Swift，所以要先設定套件關聯（Bridge），Petr Korolev 提供了三個方法安裝使用這個元件（CocoaPods、Carhage 和 Git Submodule），但可能我太好運了 CocoaPods 和 Carhage 的 Bridge 一直設定不起來，我只好用 Git Submodule，以下是我的作法：</p>
-<ol>
-<li><p>設定 Git Submodule</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 打開 Terminal，然後切換目錄到目標專案的根目錄，最後打上這一行</span></div><div class="line">$ git submodule add https://github.com/skywinder/ActionSheetPicker-3.0.git</div></pre></td></tr></table></figure>
-</li>
-<li><p>用 Finder 打開專案目錄底下的 ActionSheetPicker-3.0 資料夾，然後將 /CoreActionSheetPicker/CoreActionSheetPicker.xcodeproj 拖到 Xcode 的 Project Navigator 裡面。</p>
-<div style="width:25%;margin:0 auto;display:block;"><img src="images/Dropdwn.png" alt="ProjectSetting"></div>
-</li>
-<li><p>用滑數點擊 Xcode Project Navigator 裡最上面的專案圖案（藍色的 Icon），右邊跳出專案設定，如下圖：</p>
-<div style="width:70%;margin:0 auto;display:block;"><img src="images/Dropdwn2.png" alt="ProjectSetting"></div>
-</li>
-<li><p>切換專案設定的標籤到 Build Phases，在 Target Dependancy 裡面新增 CoreActionSheetPicker.framework。</p>
-<div style="width:65%;margin:0 auto;display:block;"><img src="images/Dropdwn3.png" alt="ProjectSetting"></div>
-</li>
-<li><p>一樣在 Build Phases 裡，新增一個 New Copy Files Phase，將其重新命名為 Copy Frameworks。</p>
-<div style="width:35%;margin:0 auto;display:block;"><img src="images/Dropdwn4.png" alt="ProjectSetting"></div><br><div style="width:35%;margin:0 auto;display:block;"><img src="images/Dropdwn5.png" alt="ProjectSetting"></div>
-</li>
-<li><p>在 Copy Frameworks 裡，選擇 Destination 為 Frameworks，然後新增 CoreActionSheetPicker.framework。</p>
-<div style="width:65%;margin:0 auto;display:block;"><img src="images/Dropdwn6.png" alt="ProjectSetting"></div>
-</li>
-<li><p>隨便新增一個 Objective-C 檔案到專案裡面，然後 Xcode 會詢問是不是要新增 Objective-C Bridge Header，請按「是」。</p>
-<div style="width:60%;margin:0 auto;display:block;"><img src="images/Dropdwn7.png" alt="ProjectSetting"></div><br><div style="width:60%;margin:0 auto;display:block;"><img src="images/Dropdwn8.png" alt="ProjectSetting"></div>
-</li>
-<li><p>在「專案名稱-Bridging-Header.h」裡新增下面這行：</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">"CoreActionSheetPicker/CoreActionSheetPicker.h"</span></span></div></pre></td></tr></table></figure>
-</li>
-<li><p>在目標 ViewController 裡面新增 Reference Outlet 變數和資料容器，然後將 Reference Outlet 元件建立連結。</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ViewController</span>: <span class="title">UIViewController</span> </span>&#123;</div><div class="line">        <span class="comment">//UITextField 的 Reference Outlet 變數</span></div><div class="line">        <span class="meta">@IBOutlet</span> <span class="keyword">weak</span> <span class="keyword">var</span> textField: <span class="type">UITextField</span>!</div><div class="line"></div><div class="line">        <span class="comment">//下拉選單的內容</span></div><div class="line">        <span class="keyword">private</span> <span class="keyword">var</span> dataArray: <span class="type">NSArray</span>!;</div><div class="line">        。。。。。</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>在 ViewController 的 viewDidLoad() 裡將改造 UITextField 改造成下拉選單。</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</div><div class="line">        。。。。。</div><div class="line">        <span class="comment">//指定下拉符號圖片</span></div><div class="line">        <span class="keyword">var</span> img = <span class="type">UIImage</span>(named: <span class="string">"dwn"</span>)</div><div class="line">        <span class="keyword">self</span>.textField.rightView = <span class="type">UIImageView</span>(image: img)</div><div class="line"></div><div class="line">        <span class="comment">//設定圖片填滿右視圖</span></div><div class="line">        <span class="keyword">self</span>.textField.rightView!.contentMode = <span class="type">UIViewContentMode</span>.<span class="type">ScaleAspectFit</span></div><div class="line">        <span class="keyword">self</span>.textField.rightView!.clipsToBounds = <span class="literal">true</span></div><div class="line"></div><div class="line">        <span class="comment">//顯示下拉符號</span></div><div class="line">        <span class="keyword">self</span>.textField.rightViewMode = <span class="type">UITextFieldViewMode</span>.<span class="type">Always</span></div><div class="line"></div><div class="line">        <span class="comment">//建立委托</span></div><div class="line">        <span class="keyword">self</span>.textField.delegate = <span class="keyword">self</span></div><div class="line"></div><div class="line">        <span class="comment">//設定使用者點擊事件</span></div><div class="line">        <span class="keyword">self</span>.textField.addTarget(<span class="keyword">self</span>, action: <span class="string">"selectClicked:"</span>, forControlEvents: <span class="type">UIControlEvents</span>.<span class="type">TouchDown</span>);</div><div class="line">        。。。。</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>最後建立使用者與 UITextField 的互動事件，以及設定 ActionSheetPicker。</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ViewController</span>: <span class="title">UIViewController</span>, <span class="title">UITextFieldDelegate</span> </span>&#123;</div><div class="line">        。。。。。</div><div class="line">        <span class="comment">//設定 textField 唯讀</span></div><div class="line">        <span class="function"><span class="keyword">func</span> <span class="title">textFieldShouldBeginEditing</span><span class="params">(textField: UITextField)</span></span> -&gt; <span class="type">Bool</span> &#123;</div><div class="line">              <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//不讓使用者透過建盤輸入文字</span></div><div class="line">        <span class="function"><span class="keyword">func</span> <span class="title">textField</span><span class="params">(textField: UITextField, shouldChangedCharactersInRange range: NSRange, replacementString string: String)</span></span> &#123;</div><div class="line">              <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//使用者點擊事件</span></div><div class="line">        <span class="function"><span class="keyword">func</span> <span class="title">selectClicked</span><span class="params">(sender: UITextField)</span></span> &#123;</div><div class="line">              <span class="type">ActionSheetStringPicker</span>.showPickerWithTitle(<span class="literal">nil</span>, rows: <span class="keyword">self</span>.dataArray, initialSelection: <span class="number">0</span>, doneBlock: &#123;</div><div class="line">                  picker, value, index <span class="keyword">in</span></div><div class="line">                  <span class="keyword">self</span>.textField.text = value</div><div class="line">                  <span class="keyword">return</span></div><div class="line">              &#125;, cancelBlock: &#123; </div><div class="line">                  <span class="type">ActionStringCancelBlock</span> <span class="keyword">in</span></div><div class="line">                  <span class="keyword">return</span></div><div class="line">              &#125;, origin: sender.superview)</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="keyword">func</span> <span class="title function_">viewDidLoad</span>() &#123;</span><br><span class="line">        <span class="operator">。。。。。</span></span><br><span class="line">        <span class="comment">//指定下拉符號圖片</span></span><br><span class="line">        <span class="keyword">var</span> img <span class="operator">=</span> <span class="type">UIImage</span>(named: <span class="string">&quot;dwn&quot;</span>)</span><br><span class="line">        <span class="keyword">self</span>.textField.rightView <span class="operator">=</span> <span class="type">UIImageView</span>(image: img)</span><br><span class="line"></span><br><span class="line">        <span class="comment">//設定圖片填滿右視圖</span></span><br><span class="line">        <span class="keyword">self</span>.textField.rightView<span class="operator">!</span>.contentMode <span class="operator">=</span> <span class="type">UIViewContentMode</span>.<span class="type">ScaleAspectFit</span></span><br><span class="line">        <span class="keyword">self</span>.textField.rightView<span class="operator">!</span>.clipsToBounds <span class="operator">=</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//顯示下拉符號</span></span><br><span class="line">        <span class="keyword">self</span>.textField.rightViewMode <span class="operator">=</span> <span class="type">UITextFieldViewMode</span>.<span class="type">Always</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//建立委托</span></span><br><span class="line">        <span class="keyword">self</span>.textField.delegate <span class="operator">=</span> <span class="keyword">self</span></span><br><span class="line">        <span class="operator">。。。。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>再來在 ViewController 裡新增兩個 function ，一個用來建立選單元件（使用 UIPickerView 及 Toolbar），一個用來告知 iOS 使用者已經完成選擇。</li>
 </ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//新增選單元件</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">func</span> <span class="title function_">showPicker</span>() &#123;</span><br><span class="line">      <span class="comment">//使用 UIPickerView 做為選擇器</span></span><br><span class="line">      <span class="keyword">self</span>.pickerView <span class="operator">=</span> <span class="type">UIPickerView</span>()</span><br><span class="line"></span><br><span class="line">      <span class="comment">//顯示目前選擇指標</span></span><br><span class="line">      <span class="keyword">self</span>.pickerView.showSelectionIndicator <span class="operator">=</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">//指定資料來源與委托</span></span><br><span class="line">      <span class="keyword">self</span>.pickerView.dataSource <span class="operator">=</span> <span class="keyword">self</span></span><br><span class="line">      <span class="keyword">self</span>.pickerView.delegate <span class="operator">=</span> <span class="keyword">self</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">//使用 UIToolbar 建立選單元件與外觀</span></span><br><span class="line">      <span class="keyword">var</span> toolbar <span class="operator">=</span> <span class="type">UIToolbar</span>()</span><br><span class="line">      toolbar.barStyle <span class="operator">=</span> <span class="type">UIBarStyle</span>.<span class="type">Default</span></span><br><span class="line">      toolbar.sizeToFit()</span><br><span class="line">      </span><br><span class="line">      <span class="comment">//新增完成選擇（Done）按鈕</span></span><br><span class="line">      <span class="keyword">var</span> doneButton <span class="operator">=</span> <span class="type">UIBarButtonItem</span>(title: <span class="string">&quot;Done&quot;</span>, style: <span class="type">UIBarButtonItemStyle</span>.<span class="type">Done</span>, target: <span class="keyword">self</span>, action: <span class="string">&quot;doneClicked&quot;</span>)</span><br><span class="line"></span><br><span class="line">      <span class="comment">//讓按鈕靠右對齊的元件</span></span><br><span class="line">      <span class="keyword">var</span> flexibleSpace <span class="operator">=</span> <span class="type">UIBarButtonItem</span>(barButtonSystemItem: <span class="type">UIBarButtonSystemItem</span>.<span class="type">FlexibleSpace</span>, target: <span class="literal">nil</span>, action: <span class="literal">nil</span>)</span><br><span class="line"></span><br><span class="line">      <span class="comment">//將元件放到 toolbar 裡面</span></span><br><span class="line">      toolbar.setItems([flexibleSpace, doneButton], animated: <span class="literal">true</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用者點擊成選擇（Done）按鈕後的動作</span></span><br><span class="line"><span class="keyword">func</span> <span class="title function_">doneClicked</span>() &#123;</span><br><span class="line">      <span class="comment">//隱藏選單</span></span><br><span class="line">      <span class="keyword">self</span>.textField.resignFirstResponder()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>最後建立使用者與 UITextField 和 UIPickerView 的互動事件，以及設定 UIPickerView 的選項資料。</li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ViewController</span>: <span class="title class_ inherited__">UIViewController</span>, <span class="title class_ inherited__">UITextFieldDelegate</span>, <span class="title class_ inherited__">UIPickerViewDataSource</span>, <span class="title class_ inherited__">UIPickerViewDelegate</span> &#123;</span><br><span class="line">        <span class="operator">。。。。。</span></span><br><span class="line">        <span class="comment">//點擊 textField 的時候出現選單</span></span><br><span class="line">        <span class="keyword">func</span> <span class="title function_">textFieldShouldBeginEditing</span>(<span class="params">textField</span>: <span class="type">UITextField</span>) -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">              <span class="comment">//沒有資料的時候不顯示選單</span></span><br><span class="line">              <span class="keyword">if</span> <span class="keyword">self</span>.dataArray <span class="operator">!=</span> <span class="literal">nil</span> <span class="operator">&amp;&amp;</span> <span class="keyword">self</span>.dataArray.count <span class="operator">&gt;</span> <span class="number">0</span> &#123;</span><br><span class="line">                    <span class="keyword">self</span>.showPicker(textField)</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">              &#125;</span><br><span class="line">              <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//不讓使用者透過建盤輸入文字</span></span><br><span class="line">        <span class="keyword">func</span> <span class="title function_">textField</span>(<span class="params">textField</span>: <span class="type">UITextField</span>, <span class="params">shouldChangedCharactersInRange</span> <span class="params">range</span>: <span class="type">NSRange</span>, <span class="params">replacementString</span> <span class="params">string</span>: <span class="type">String</span>) &#123;</span><br><span class="line">              <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//設定選單項目的列數，例如時間 (小時：分鐘) 的 pickerView 就是 return 2</span></span><br><span class="line">        <span class="keyword">func</span> <span class="title function_">numberOfComponentInPickerView</span>(<span class="params">pickerView</span>: <span class="type">UIPickerView</span>) -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">              <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//設定選單選項的數量</span></span><br><span class="line">        <span class="keyword">func</span> <span class="title function_">pickerView</span>(<span class="params">pickerView</span>: <span class="type">UIPickerView</span>, <span class="params">numberOfRowsInComponent</span> <span class="params">component</span>: <span class="type">Int</span>) -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">              <span class="keyword">return</span> <span class="keyword">self</span>.dataArray.count</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//設定選單項目</span></span><br><span class="line">        <span class="keyword">func</span> <span class="title function_">pickerView</span>(<span class="params">pickerView</span>: <span class="type">UIPickerView</span>, <span class="params">titleForRow</span> <span class="params">row</span>: <span class="type">Int</span>, <span class="params">forComponent</span> <span class="params">component</span>: <span class="type">Int</span>) -&gt; <span class="type">String</span>! &#123;</span><br><span class="line">              <span class="keyword">return</span> <span class="keyword">self</span>.dataArray[row] <span class="keyword">as!</span> <span class="type">String</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//當選單被滑動（Sliding）的時候，改變 textField 的值</span></span><br><span class="line">        <span class="keyword">func</span> <span class="title function_">pickerView</span>(<span class="params">pickerView</span>: <span class="type">UIPickerView</span>, <span class="params">didSelectRow</span> <span class="params">row</span>: <span class="type">Int</span>, <span class="params">inComponent</span> <span class="params">component</span>: <span class="type">Int</span>) &#123;</span><br><span class="line">              <span class="keyword">self</span>.textField.text <span class="operator">=</span> <span class="keyword">self</span>.dataArray[row] <span class="keyword">as!</span> <span class="type">String</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="方法二：使用-ActionSheetPicker-3-0"><a href="#方法二：使用-ActionSheetPicker-3-0" class="headerlink" title="方法二：使用 ActionSheetPicker-3.0"></a>方法二：使用 ActionSheetPicker-3.0</h3><p><a href="https://github.com/skywinder/ActionSheetPicker-3.0">ActionSheetPicker-3.0</a> 這個元件是 <a href="https://github.com/skywinder">Petr Korolev</a> 這個好心人用 Objective-C 寫的，但我的專案目標語言是 Swift，所以要先設定套件關聯（Bridge），Petr Korolev 提供了三個方法安裝使用這個元件（CocoaPods、Carhage 和 Git Submodule），但可能我太好運了 CocoaPods 和 Carhage 的 Bridge 一直設定不起來，我只好用 Git Submodule，以下是我的作法：</p>
+<ol>
+<li>設定 Git Submodule</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打開 Terminal，然後切換目錄到目標專案的根目錄，最後打上這一行</span></span><br><span class="line">$ git submodule add https://github.com/skywinder/ActionSheetPicker-3.0.git</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>用 Finder 打開專案目錄底下的 ActionSheetPicker-3.0 資料夾，然後將 &#x2F;CoreActionSheetPicker&#x2F;CoreActionSheetPicker.xcodeproj 拖到 Xcode 的 Project Navigator 裡面。</li>
+</ol>
+<div style="width:25%;margin:0 auto;display:block;">
+
+<p><img src="/blog/images/Dropdwn.png" alt="ProjectSetting"></p>
+</div>
+
+<ol start="3">
+<li>用滑數點擊 Xcode Project Navigator 裡最上面的專案圖案（藍色的 Icon），右邊跳出專案設定，如下圖：</li>
+</ol>
+<div style="width:70%;margin:0 auto;display:block;">
+
+<p><img src="/blog/images/Dropdwn2.png" alt="ProjectSetting"></p>
+</div>
+
+<ol start="4">
+<li>切換專案設定的標籤到 Build Phases，在 Target Dependancy 裡面新增 CoreActionSheetPicker.framework。</li>
+</ol>
+<div style="width:65%;margin:0 auto;display:block;">
+
+<p><img src="/blog/images/Dropdwn3.png" alt="ProjectSetting"></p>
+</div>
+
+<ol start="5">
+<li>一樣在 Build Phases 裡，新增一個 New Copy Files Phase，將其重新命名為 Copy Frameworks。</li>
+</ol>
+<div style="width:35%;margin:0 auto;display:block;">
+
+<p><img src="/blog/images/Dropdwn4.png" alt="ProjectSetting"></p>
+</div>
+<div style="width:35%;margin:0 auto;display:block;">
+
+<p><img src="/blog/images/Dropdwn5.png" alt="ProjectSetting"></p>
+</div>
+
+<ol start="6">
+<li>在 Copy Frameworks 裡，選擇 Destination 為 Frameworks，然後新增 CoreActionSheetPicker.framework。</li>
+</ol>
+<div style="width:65%;margin:0 auto;display:block;">
+
+<p><img src="/blog/images/Dropdwn6.png" alt="ProjectSetting"></p>
+</div>
+
+<ol start="7">
+<li>隨便新增一個 Objective-C 檔案到專案裡面，然後 Xcode 會詢問是不是要新增 Objective-C Bridge Header，請按「是」。</li>
+</ol>
+<div style="width:60%;margin:0 auto;display:block;">
+
+<p><img src="/blog/images/Dropdwn7.png" alt="ProjectSetting"></p>
+</div>
+<div style="width:60%;margin:0 auto;display:block;">
+
+<p><img src="/blog/images/Dropdwn8.png" alt="ProjectSetting"></p>
+</div>
+
+<ol start="8">
+<li>在「專案名稱-Bridging-Header.h」裡新增下面這行：</li>
+</ol>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="string">&quot;CoreActionSheetPicker/CoreActionSheetPicker.h&quot;</span></span></span><br></pre></td></tr></table></figure>
+
+<ol start="9">
+<li>在目標 ViewController 裡面新增 Reference Outlet 變數和資料容器，然後將 Reference Outlet 元件建立連結。</li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ViewController</span>: <span class="title class_ inherited__">UIViewController</span> &#123;</span><br><span class="line">        <span class="comment">//UITextField 的 Reference Outlet 變數</span></span><br><span class="line">        <span class="keyword">@IBOutlet</span> <span class="keyword">weak</span> <span class="keyword">var</span> textField: <span class="type">UITextField</span>!</span><br><span class="line"></span><br><span class="line">        <span class="comment">//下拉選單的內容</span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">var</span> dataArray: <span class="type">NSArray</span>!;</span><br><span class="line">        <span class="operator">。。。。。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="10">
+<li>在 ViewController 的 viewDidLoad() 裡將改造 UITextField 改造成下拉選單。</li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="keyword">func</span> <span class="title function_">viewDidLoad</span>() &#123;</span><br><span class="line">        <span class="operator">。。。。。</span></span><br><span class="line">        <span class="comment">//指定下拉符號圖片</span></span><br><span class="line">        <span class="keyword">var</span> img <span class="operator">=</span> <span class="type">UIImage</span>(named: <span class="string">&quot;dwn&quot;</span>)</span><br><span class="line">        <span class="keyword">self</span>.textField.rightView <span class="operator">=</span> <span class="type">UIImageView</span>(image: img)</span><br><span class="line"></span><br><span class="line">        <span class="comment">//設定圖片填滿右視圖</span></span><br><span class="line">        <span class="keyword">self</span>.textField.rightView<span class="operator">!</span>.contentMode <span class="operator">=</span> <span class="type">UIViewContentMode</span>.<span class="type">ScaleAspectFit</span></span><br><span class="line">        <span class="keyword">self</span>.textField.rightView<span class="operator">!</span>.clipsToBounds <span class="operator">=</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//顯示下拉符號</span></span><br><span class="line">        <span class="keyword">self</span>.textField.rightViewMode <span class="operator">=</span> <span class="type">UITextFieldViewMode</span>.<span class="type">Always</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//建立委托</span></span><br><span class="line">        <span class="keyword">self</span>.textField.delegate <span class="operator">=</span> <span class="keyword">self</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//設定使用者點擊事件</span></span><br><span class="line">        <span class="keyword">self</span>.textField.addTarget(<span class="keyword">self</span>, action: <span class="string">&quot;selectClicked:&quot;</span>, forControlEvents: <span class="type">UIControlEvents</span>.<span class="type">TouchDown</span>);</span><br><span class="line">        <span class="operator">。。。。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="11">
+<li>最後建立使用者與 UITextField 的互動事件，以及設定 ActionSheetPicker。</li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ViewController</span>: <span class="title class_ inherited__">UIViewController</span>, <span class="title class_ inherited__">UITextFieldDelegate</span> &#123;</span><br><span class="line">        <span class="operator">。。。。。</span></span><br><span class="line">        <span class="comment">//設定 textField 唯讀</span></span><br><span class="line">        <span class="keyword">func</span> <span class="title function_">textFieldShouldBeginEditing</span>(<span class="params">textField</span>: <span class="type">UITextField</span>) -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">              <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//不讓使用者透過建盤輸入文字</span></span><br><span class="line">        <span class="keyword">func</span> <span class="title function_">textField</span>(<span class="params">textField</span>: <span class="type">UITextField</span>, <span class="params">shouldChangedCharactersInRange</span> <span class="params">range</span>: <span class="type">NSRange</span>, <span class="params">replacementString</span> <span class="params">string</span>: <span class="type">String</span>) &#123;</span><br><span class="line">              <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//使用者點擊事件</span></span><br><span class="line">        <span class="keyword">func</span> <span class="title function_">selectClicked</span>(<span class="params">sender</span>: <span class="type">UITextField</span>) &#123;</span><br><span class="line">              <span class="type">ActionSheetStringPicker</span>.showPickerWithTitle(<span class="literal">nil</span>, rows: <span class="keyword">self</span>.dataArray, initialSelection: <span class="number">0</span>, doneBlock: &#123;</span><br><span class="line">                  picker, value, index <span class="keyword">in</span></span><br><span class="line">                  <span class="keyword">self</span>.textField.text <span class="operator">=</span> value</span><br><span class="line">                  <span class="keyword">return</span></span><br><span class="line">              &#125;, cancelBlock: &#123; </span><br><span class="line">                  <span class="type">ActionStringCancelBlock</span> <span class="keyword">in</span></span><br><span class="line">                  <span class="keyword">return</span></span><br><span class="line">              &#125;, origin: sender.superview)</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yiskang.github.io/blog/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List、Combobox-by-Swift/" data-id="cixyhmykx000biex7nff257lt" class="article-share-link">Share</a>
+      <a data-url="http://yiskang.github.io/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List%E3%80%81Combobox-by-Swift/" data-id="cuidgS6U_hEUdZ-uNuxPjSche" data-title="iOS Pulldown List(Dropdown List、Combobox) by Swift" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Objective-C/">Objective-C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Swift/">Swift</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/iOS/">iOS</a></li></ul>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Objective-C/" rel="tag">Objective-C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Swift/" rel="tag">Swift</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/iOS/" rel="tag">iOS</a></li></ul>
 
     </footer>
   </div>
@@ -156,11 +220,12 @@
 </article>
 
 
+
   
-    <article id="post-Add-UITextField-on-UIView-Programmitically-by-Swift" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Add-UITextField-on-UIView-Programmitically-by-Swift" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/blog/2015/07/17/Add-UITextField-on-UIView-Programmitically-by-Swift/" class="article-date">
-  <time datetime="2015-07-17T03:44:40.000Z" itemprop="datePublished">2015-07-17</time>
+  <time class="dt-published" datetime="2015-07-17T11:44:40.000Z" itemprop="datePublished">2015-07-17</time>
 </a>
     
   <div class="article-category">
@@ -175,27 +240,32 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2015/07/17/Add-UITextField-on-UIView-Programmitically-by-Swift/">Add UITextField on UIView Programmitically by Swift</a>
+      <a class="p-name article-title" href="/blog/2015/07/17/Add-UITextField-on-UIView-Programmitically-by-Swift/">Add UITextField on UIView Programmitically by Swift</a>
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <p>好像有點久沒有寫文章。。。</p>
 <p>最近開始玩 iOS SDK，今天不知道哪根筋不對，突然不想用 Interface Builder 拉 UI，想直接用寫 Code 的方式生，所以我就翻了一下關方手冊，還有拜了 Google 大神！萬事起頭難，我們就先從簡單的開始吧，以下是我找到的方法，請參考！</p>
-<h3 id="最簡單的作法"><a href="#最簡單的作法" class="headerlink" title="最簡單的作法"></a>最簡單的作法</h3><p>從官方手冊上看到最簡單的辦法就是直接呼叫 UITextField(frame:) 這個建構式，但這個建構式必須傳入一個 CGRect 型別的 frame 變數，到這個 frame 要怎麼建立勒？官方提供了 <a href="https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CGGeometry/index.html#//apple_ref/c/func/CGRectMake" target="_blank" rel="external">CGRectMake(x, y, width, height)</a> 這個方法可以快速的產生 UITextField 需要的 frame，說簡單一點就是透過 CGRectMake() 告訴 iOS 這個 UITextField 的外框多大、位置在哪，最後透過 addSubview() 這個方法將 UITextField 放到 view 上面。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//產生 UITextField 元件</span></div><div class="line"><span class="keyword">var</span> txtField = <span class="type">UITextField</span>(frame: <span class="type">CGRectMake</span>(<span class="number">10</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">30</span>));</div><div class="line"></div><div class="line"><span class="comment">//放到 view 上面</span></div><div class="line"><span class="keyword">self</span>.view.addSubview(txtField);</div></pre></td></tr></table></figure></p>
-<h3 id="進階的作法"><a href="#進階的作法" class="headerlink" title="進階的作法"></a>進階的作法</h3><p>透過上述的方式可以快速產生一個白白的 UITextField，但如果想產生像 Interface Builder 拉出來的，要怎麼做？除了上面那兩行外，還做一些額外的設定，這樣 UITextField 就可以像 iOS 預設的一樣簡單又漂亮！以下是我的做法：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> txtField = <span class="type">UITextField</span>(frame: <span class="type">CGRectMake</span>(<span class="number">10</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">30</span>));</div><div class="line">txtField.borderStyle = <span class="type">UITextBorderStyle</span>.<span class="type">RoundedRect</span>;</div><div class="line">txtField.font = <span class="type">UIFont</span>.systemFontOfSize(<span class="number">15</span>);</div><div class="line">txtField.placeholder = <span class="string">"Select Drawing"</span>;</div><div class="line">txtField.autocorrectionType = <span class="type">UITextAutocorrectionType</span>.<span class="type">No</span>;</div><div class="line">txtField.keyboardType = <span class="type">UIKeyboardType</span>.<span class="type">Default</span>;</div><div class="line">txtField.returnKeyType = <span class="type">UIReturnKeyType</span>.<span class="type">Done</span>;</div><div class="line">txtField.clearButtonMode = <span class="type">UITextFieldViewMode</span>.<span class="type">WhileEditing</span>;</div><div class="line">txtField.contentVerticalAlignment = <span class="type">UIControlContentVerticalAlignment</span>.<span class="type">Center</span>;</div><div class="line"></div><div class="line"><span class="keyword">self</span>.view.addSubview(txtField);</div></pre></td></tr></table></figure></p>
-<p>Ref. <a href="https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/CreatingViews/CreatingViews.html#//apple_ref/doc/uid/TP40009503-CH5-SW1" target="_blank" rel="external">View Programming Guilde for iOS</a></p>
+<h3 id="最簡單的作法"><a href="#最簡單的作法" class="headerlink" title="最簡單的作法"></a>最簡單的作法</h3><p>從官方手冊上看到最簡單的辦法就是直接呼叫 UITextField(frame:) 這個建構式，但這個建構式必須傳入一個 CGRect 型別的 frame 變數，到這個 frame 要怎麼建立勒？官方提供了 <a href="https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CGGeometry/index.html#//apple_ref/c/func/CGRectMake">CGRectMake(x, y, width, height)</a> 這個方法可以快速的產生 UITextField 需要的 frame，說簡單一點就是透過 CGRectMake() 告訴 iOS 這個 UITextField 的外框多大、位置在哪，最後透過 addSubview() 這個方法將 UITextField 放到 view 上面。 </p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//產生 UITextField 元件</span></span><br><span class="line"><span class="keyword">var</span> txtField <span class="operator">=</span> <span class="type">UITextField</span>(frame: <span class="type">CGRectMake</span>(<span class="number">10</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">30</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">//放到 view 上面</span></span><br><span class="line"><span class="keyword">self</span>.view.addSubview(txtField);</span><br></pre></td></tr></table></figure>
+
+<h3 id="進階的作法"><a href="#進階的作法" class="headerlink" title="進階的作法"></a>進階的作法</h3><p>透過上述的方式可以快速產生一個白白的 UITextField，但如果想產生像 Interface Builder 拉出來的，要怎麼做？除了上面那兩行外，還做一些額外的設定，這樣 UITextField 就可以像 iOS 預設的一樣簡單又漂亮！以下是我的做法：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> txtField <span class="operator">=</span> <span class="type">UITextField</span>(frame: <span class="type">CGRectMake</span>(<span class="number">10</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">30</span>));</span><br><span class="line">txtField.borderStyle <span class="operator">=</span> <span class="type">UITextBorderStyle</span>.<span class="type">RoundedRect</span>;</span><br><span class="line">txtField.font <span class="operator">=</span> <span class="type">UIFont</span>.systemFontOfSize(<span class="number">15</span>);</span><br><span class="line">txtField.placeholder <span class="operator">=</span> <span class="string">&quot;Select Drawing&quot;</span>;</span><br><span class="line">txtField.autocorrectionType <span class="operator">=</span> <span class="type">UITextAutocorrectionType</span>.<span class="type">No</span>;</span><br><span class="line">txtField.keyboardType <span class="operator">=</span> <span class="type">UIKeyboardType</span>.<span class="type">Default</span>;</span><br><span class="line">txtField.returnKeyType <span class="operator">=</span> <span class="type">UIReturnKeyType</span>.<span class="type">Done</span>;</span><br><span class="line">txtField.clearButtonMode <span class="operator">=</span> <span class="type">UITextFieldViewMode</span>.<span class="type">WhileEditing</span>;</span><br><span class="line">txtField.contentVerticalAlignment <span class="operator">=</span> <span class="type">UIControlContentVerticalAlignment</span>.<span class="type">Center</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">self</span>.view.addSubview(txtField);</span><br></pre></td></tr></table></figure>
+
+<p>Ref. <a href="https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/CreatingViews/CreatingViews.html#//apple_ref/doc/uid/TP40009503-CH5-SW1">View Programming Guilde for iOS</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yiskang.github.io/blog/blog/2015/07/17/Add-UITextField-on-UIView-Programmitically-by-Swift/" data-id="cixyhmykk0004iex7ugyoauxx" class="article-share-link">Share</a>
+      <a data-url="http://yiskang.github.io/blog/2015/07/17/Add-UITextField-on-UIView-Programmitically-by-Swift/" data-id="cuidIXb50x-KU6cbPV0F4TyVu" data-title="Add UITextField on UIView Programmitically by Swift" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Swift/">Swift</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UI/">UI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/iOS/">iOS</a></li></ul>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Swift/" rel="tag">Swift</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UI/" rel="tag">UI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/iOS/" rel="tag">iOS</a></li></ul>
 
     </footer>
   </div>
@@ -203,11 +273,12 @@
 </article>
 
 
+
   
-    <article id="post-Use-Atlassian-Source-Tree-embedded-git-in-Windows" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Use-Atlassian-Source-Tree-embedded-git-in-Windows" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/blog/2015/05/06/Use-Atlassian-Source-Tree-embedded-git-in-Windows/" class="article-date">
-  <time datetime="2015-05-06T10:01:09.000Z" itemprop="datePublished">2015-05-06</time>
+  <time class="dt-published" datetime="2015-05-06T18:01:09.000Z" itemprop="datePublished">2015-05-06</time>
 </a>
     
   <div class="article-category">
@@ -222,32 +293,39 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2015/05/06/Use-Atlassian-Source-Tree-embedded-git-in-Windows/">Use Atlassian Source Tree embedded git in Windows</a>
+      <a class="p-name article-title" href="/blog/2015/05/06/Use-Atlassian-Source-Tree-embedded-git-in-Windows/">Use Atlassian Source Tree embedded git in Windows</a>
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <p>前些日子因為要在 Mac OS X 上面安裝 Git 的圖形化管理程式，接觸了 Atlassian SourceTree 跟 Github for Mac，但由於工作上有需要使用 Atlassian Bitbucket，所以最後我選擇了 SourceTree。最近因為一些原因工作用的 PC 被還原了，什麼都沒有了，只好一一重裝！裝好 SourceTree 後，我發現 SourceTree 本身就有將 Git for Windows 的執行檔包起來，所以不用另外再裝 Git，但如果想直接使用 SourceTree 內建的 Git 工具要怎麼做呢？以下是我所做的步驟供大家參考：</p>
 <ol>
-<li><p>Atlassian SourceTree 附帶 Git 執行檔的位置在：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">%USERPROFILE%\AppData\Local\Atlassian\SourceTree\git_local\bin</div></pre></td></tr></table></figure>
-</li>
-<li><p>將 Git 執行檔的位置加到使用者環境變數（User Environment Variables）：</p>
-<div style="width:300px;margin:0 auto;display:block;"><br><img src="images/GitPath.jpg" alt="GitImg"><br></div></li>
-<li>重開命令提示字元（Command Prompt）或是 PowerShell，就可以開心使用摟～</li>
+<li>Atlassian SourceTree 附帶 Git 執行檔的位置在：</li>
 </ol>
-<p>Reference: <a href="https://answers.atlassian.com/questions/245850/how-to-run-a-git-command-as-a-custom-action" target="_blank" rel="external">How to run a git command as a custom action?</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%USERPROFILE%\AppData\Local\Atlassian\SourceTree\git_local\bin</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>將 Git 執行檔的位置加到使用者環境變數（User Environment Variables）：</li>
+</ol>
+<div style="width:300px;margin:0 auto;display:block;">
+
+<p><img src="/blog/images/GitPath.jpg" alt="GitImg"></p>
+</div>
+3. 重開命令提示字元（Command Prompt）或是 PowerShell，就可以開心使用摟～
+
+
+<p>Reference: <a href="https://answers.atlassian.com/questions/245850/how-to-run-a-git-command-as-a-custom-action">How to run a git command as a custom action?</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yiskang.github.io/blog/blog/2015/05/06/Use-Atlassian-Source-Tree-embedded-git-in-Windows/" data-id="cixyhmykn0005iex7nrzh8u07" class="article-share-link">Share</a>
+      <a data-url="http://yiskang.github.io/blog/2015/05/06/Use-Atlassian-Source-Tree-embedded-git-in-Windows/" data-id="cuidW5gHD5Y2g5sm37F_tb27n" data-title="Use Atlassian Source Tree embedded git in Windows" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Git/">Git</a></li></ul>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Git/" rel="tag">Git</a></li></ul>
 
     </footer>
   </div>
@@ -255,11 +333,12 @@
 </article>
 
 
+
   
-    <article id="post-Revit-debugging-on-Visual-Studio-2013" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Revit-debugging-on-Visual-Studio-2013" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/blog/2015/05/06/Revit-debugging-on-Visual-Studio-2013/" class="article-date">
-  <time datetime="2015-05-06T09:56:25.000Z" itemprop="datePublished">2015-05-06</time>
+  <time class="dt-published" datetime="2015-05-06T17:56:25.000Z" itemprop="datePublished">2015-05-06</time>
 </a>
     
   <div class="article-category">
@@ -274,33 +353,47 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2015/05/06/Revit-debugging-on-Visual-Studio-2013/">Revit debugging on Visual Studio 2013</a>
+      <a class="p-name article-title" href="/blog/2015/05/06/Revit-debugging-on-Visual-Studio-2013/">Revit debugging on Visual Studio 2013</a>
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <p>最近萬惡的微軟（M$）突然大爆發，一直開源又將 Visual Studio 2013 Professional 釋出為 Visual Studio Community 版，免費提供大家使用。用 Visual Studio 2012 也好一陣子了，所以我想換口味試看看～ :P 但裝好 2013 拿來 Debug Revit 2016 增益集（Addin）的時候，卻發現 Revit 掛掉 Crash 了！</p>
-<div style="width:600px;margin:0 auto;display:block;"><br><img src="images/RevitDebuggingError.jpg" alt="RevitImg"><br></div><br>所幸拜了 Google 大神後發現了解法，只要將使用除錯器的相容模式（Debugging in  Managed Compatibility Mode）就可以解決了！以下是我所做的步㵵供大家參考：<br>1. 到工具（Tools） &gt; 選項（Options），紅框所選位置：<br><div style="width:300px;margin:0 auto;display:block;"><br><img src="images/RevitDebuggingError2.jpg" alt="RevitImg"><br></div>
+<div style="width:600px;margin:0 auto;display:block;">
 
-<ol>
-<li><p>點選除錯（Debugging）項目，在點選一般（General），最後將使用相容模式（Use Managed Compatibility Mode）勾選起來，按下確認（OK）：</p>
-<div style="width:600px;margin:0 auto;display:block;"><br><img src="images/RevitDebuggingError3.jpg" alt="RevitImg"><br></div>
-</li>
-<li><p>可以開心使用 Visual Studio 2013 對 Revit 增益集進行除錯（Trace Debugging）摟～</p>
-</li>
+<p><img src="/blog/images/RevitDebuggingError.jpg" alt="RevitImg"></p>
+</div>
+所幸拜了 Google 大神後發現了解法，只要將使用除錯器的相容模式（Debugging in  Managed Compatibility Mode）就可以解決了！以下是我所做的步㵵供大家參考：
+1. 到工具（Tools） > 選項（Options），紅框所選位置：
+<div style="width:300px;margin:0 auto;display:block;">
+
+<p><img src="/blog/images/RevitDebuggingError2.jpg" alt="RevitImg"></p>
+</div>
+
+<ol start="2">
+<li>點選除錯（Debugging）項目，在點選一般（General），最後將使用相容模式（Use Managed Compatibility Mode）勾選起來，按下確認（OK）：</li>
 </ol>
-<p>Reference: <a href="http://revitlearningclub.blogspot.tw/2015/01/getting-revit-to-start-while-debugging.html" target="_blank" rel="external">Getting Revit to start while debugging API apps with Visual Studio 2013</a></p>
+<div style="width:600px;margin:0 auto;display:block;">
+
+<p><img src="/blog/images/RevitDebuggingError3.jpg" alt="RevitImg"></p>
+</div>
+
+<ol start="3">
+<li>可以開心使用 Visual Studio 2013 對 Revit 增益集進行除錯（Trace Debugging）摟～</li>
+</ol>
+<p>Reference: <a href="http://revitlearningclub.blogspot.tw/2015/01/getting-revit-to-start-while-debugging.html">Getting Revit to start while debugging API apps with Visual Studio 2013</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yiskang.github.io/blog/blog/2015/05/06/Revit-debugging-on-Visual-Studio-2013/" data-id="cixyhmykb0001iex7v28mllhx" class="article-share-link">Share</a>
+      <a data-url="http://yiskang.github.io/blog/2015/05/06/Revit-debugging-on-Visual-Studio-2013/" data-id="cuidoqnFc2wLkUM2nY7K2WFhQ" data-title="Revit debugging on Visual Studio 2013" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Plugin/">Plugin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Revit/">Revit</a></li></ul>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Plugin/" rel="tag">Plugin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Revit/" rel="tag">Revit</a></li></ul>
 
     </footer>
   </div>
@@ -308,11 +401,12 @@
 </article>
 
 
+
   
-    <article id="post-Mission-Control-沒有反應怎麼辦？" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Mission-Control-沒有反應怎麼辦？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/blog/2015/05/02/Mission-Control-沒有反應怎麼辦？/" class="article-date">
-  <time datetime="2015-05-02T01:49:33.000Z" itemprop="datePublished">2015-05-02</time>
+    <a href="/blog/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/" class="article-date">
+  <time class="dt-published" datetime="2015-05-02T09:49:33.000Z" itemprop="datePublished">2015-05-02</time>
 </a>
     
   <div class="article-category">
@@ -327,26 +421,28 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2015/05/02/Mission-Control-沒有反應怎麼辦？/">Mission Control 沒有反應怎麼辦？</a>
+      <a class="p-name article-title" href="/blog/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/">Mission Control 沒有反應怎麼辦？</a>
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <p>最近變的很不愛關電腦，常常螢幕一蓋就收到包包裡了。但久沒有重開機，有些應用程式就會不乖，突然沒有反應了，像這次不乖的就是 Mission Control。它掛掉的當下，我剛好在用 Evernote 語音記事記錄演討會的內容，沒辦法重開機，非常囧！！！還好 Mission Control 可以在不重開機的狀態下重開，以下是我使用的方法，供大家參考！（當然在使用前必需先開起 Terminal ～）</p>
-<h3 id="比較暴力的作法"><a href="#比較暴力的作法" class="headerlink" title="比較暴力的作法"></a>比較暴力的作法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ killall Dock</div></pre></td></tr></table></figure>
-<h3 id="溫柔的作法"><a href="#溫柔的作法" class="headerlink" title="溫柔的作法"></a>溫柔的作法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ osascript <span class="_">-e</span> <span class="string">'quit application "Dock"'</span></div></pre></td></tr></table></figure>
-<p>Reference: <a href="http://hints.macworld.com/article.php?story=20110802073945173" target="_blank" rel="external">10.7: Restart Mission Control</a></p>
+<h3 id="比較暴力的作法"><a href="#比較暴力的作法" class="headerlink" title="比較暴力的作法"></a>比較暴力的作法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ killall Dock</span><br></pre></td></tr></table></figure>
+
+<h3 id="溫柔的作法"><a href="#溫柔的作法" class="headerlink" title="溫柔的作法"></a>溫柔的作法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ osascript -e <span class="string">&#x27;quit application &quot;Dock&quot;&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>Reference: <a href="http://hints.macworld.com/article.php?story=20110802073945173">10.7: Restart Mission Control</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yiskang.github.io/blog/blog/2015/05/02/Mission-Control-沒有反應怎麼辦？/" data-id="cixyhmyk70000iex7ptm8ghah" class="article-share-link">Share</a>
+      <a data-url="http://yiskang.github.io/blog/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/" data-id="cuid7zeaU-F952Kw1-1xOFGWp" data-title="Mission Control 沒有反應怎麼辦？" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/OS-X/">OS X</a></li></ul>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/OS-X/" rel="tag">OS X</a></li></ul>
 
     </footer>
   </div>
@@ -354,11 +450,12 @@
 </article>
 
 
+
   
-    <article id="post-在Terminal開啟Sublime" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-在Terminal開啟Sublime" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/blog/2015/04/29/在Terminal開啟Sublime/" class="article-date">
-  <time datetime="2015-04-29T09:14:54.000Z" itemprop="datePublished">2015-04-29</time>
+    <a href="/blog/2015/04/29/%E5%9C%A8Terminal%E9%96%8B%E5%95%9FSublime/" class="article-date">
+  <time class="dt-published" datetime="2015-04-29T17:14:54.000Z" itemprop="datePublished">2015-04-29</time>
 </a>
     
   <div class="article-category">
@@ -373,36 +470,39 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2015/04/29/在Terminal開啟Sublime/">在 Terminal 開啟 Sublime</a>
+      <a class="p-name article-title" href="/blog/2015/04/29/%E5%9C%A8Terminal%E9%96%8B%E5%95%9FSublime/">在 Terminal 開啟 Sublime</a>
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <p>開使用 Hexo 寫筆記以後，常常都要先 hexo new 一則文章，在用 vim 開啟他。然後問題就來了，我很多時候都要在文章裡面貼上程式碼的內容，但因為我有開啟 vim 的自動縮排功能，直接貼上去後，程式碼就會被縮排縮到找不到內文，自作孽啊… 囧rz</p>
 <p>就因為這樣我想找個類似 UltraEdit 的軟體來用，然後聽說 Sublime 似乎不錯，但每次開啟 Hexo 的 Markdown 檔案都要做拖拉的動作，這時候我的懶毛病就犯了！好我想讓 Sublime 跟 vim 一樣可以直接在 Terminal 開啟文章的 md 檔，那要怎麼做呢？以下就是我所做的設定：</p>
 <ol>
-<li><p>先測試可不可以直接啟動 Sublime</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl</div></pre></td></tr></table></figure>
-</li>
-<li><p>如果可以的話，現在為 Sublime 建立一個 alias：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">alias</span> sublime=<span class="string">"/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>然後把他加到 shell 的 rc 檔裡面，以下以 zsh 為例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">echo</span> <span class="string">'alias sublime="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"'</span> &gt; ~/.zshrc</div><div class="line">$ <span class="built_in">source</span> ~/.zshrc</div></pre></td></tr></table></figure>
-</li>
+<li>先測試可不可以直接啟動 Sublime</li>
 </ol>
-<p>Reference: <a href="http://azyukei.github.io/2015/04/Sublime-Text-OSX-Terminal-Launch/" target="_blank" rel="external">在 Terminal 啟動 Sublime Text</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>如果可以的話，現在為 Sublime 建立一個 alias：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> sublime=<span class="string">&quot;/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl&quot;</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>然後把他加到 shell 的 rc 檔裡面，以下以 zsh 為例：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;alias sublime=&quot;/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl&quot;&#x27;</span> &gt; ~/.zshrc</span><br><span class="line">$ <span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>Reference: <a href="http://azyukei.github.io/2015/04/Sublime-Text-OSX-Terminal-Launch/">在 Terminal 啟動 Sublime Text</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yiskang.github.io/blog/blog/2015/04/29/在Terminal開啟Sublime/" data-id="cixyhmykw000aiex7nkl0qomq" class="article-share-link">Share</a>
+      <a data-url="http://yiskang.github.io/blog/2015/04/29/%E5%9C%A8Terminal%E9%96%8B%E5%95%9FSublime/" data-id="cuidTtJOfn5dOMLeH7G5Q_EyN" data-title="在 Terminal 開啟 Sublime" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Hexo/">Hexo</a></li></ul>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Hexo/" rel="tag">Hexo</a></li></ul>
 
     </footer>
   </div>
@@ -410,11 +510,12 @@
 </article>
 
 
+
   
-    <article id="post-git-submodule" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-git-submodule" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/blog/2015/04/16/git-submodule/" class="article-date">
-  <time datetime="2015-04-16T05:46:36.000Z" itemprop="datePublished">2015-04-16</time>
+  <time class="dt-published" datetime="2015-04-16T13:46:36.000Z" itemprop="datePublished">2015-04-16</time>
 </a>
     
   <div class="article-category">
@@ -429,40 +530,63 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2015/04/16/git-submodule/">git submodule 介紹</a>
+      <a class="p-name article-title" href="/blog/2015/04/16/git-submodule/">git submodule 介紹</a>
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <h3 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h3><p>最近為了方便管理專案，將他拆成了好幾個小專案來維護，然後透過參考引入想要的檔案。但 git 沒辦法像 SVN 那樣只單獨下載一個檔案，它必需整個 repository 都 clone 下來，可是整個 clone 下來還要把想要的檔案分別丟到對的位置，這樣好像太麻煩了，還好 git 有提供 submodule 這個機制可以用來做外部資源參考與更新，解救了我這個懶人～～～ XD</p>
-<h3 id="新增-submodule"><a href="#新增-submodule" class="headerlink" title="新增 submodule"></a>新增 submodule</h3><p>指令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git submodule add &#123;repository&#125;      &#123;path/folder name&#125;</div></pre></td></tr></table></figure></p>
-<p>範例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git submodule add https://github.com/yiskang/hexo-theme-pure.git  theme/pure</div></pre></td></tr></table></figure></p>
-<p><b>注意：</b>在下新增指令前，請注意<span style="color:red;font-wegiht:bold;"> {path/folder name} </span>的部份，先不要新增空目錄，git 自己會新增，不然 會產生衝突，submodule 就會無法新增。<b>不需要為 submodule 建立目錄</b></p>
-<p>新增完後會看到類似下面的內容：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Cloning into <span class="string">'theme/pure'</span>...</div><div class="line">remote: Counting objects: 202, done.</div><div class="line">remote: Compressing objects: 100% (27/27), done.</div><div class="line">remote: Total 202 (delta 14), reused 0 (delta 0), pack-reused 175</div><div class="line">Receiving objects: 100% (202/202), 49.48 KiB | 0 bytes/s, done.</div><div class="line">Resolving deltas: 100% (84/84), done.</div><div class="line">Checking connectivity... done.</div></pre></td></tr></table></figure></p>
-<p>這時候輸入 <code>git status</code> ，就會發現多了兩檔案需要 commit:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">On branch master</div><div class="line">Initial commit</div><div class="line">Changes to be committed:</div><div class="line">  (use <span class="string">"git rm --cached &lt;file&gt;..."</span> to unstage)</div><div class="line">      new file:   .gitmodules</div><div class="line">      new file:   theme/pure</div></pre></td></tr></table></figure></p>
-<p>此外，git 會將 submodule 的資訊記錄在 .gitmodules 裡面:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[submodule <span class="string">"theme/pure"</span>]</div><div class="line">      path = theme/pure</div><div class="line">      url = https://github.com/yiskang/hexo-theme-pure.git</div></pre></td></tr></table></figure></p>
-<p>最後記得要 commit :<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit -m <span class="string">"Add submodule pure theme"</span></div></pre></td></tr></table></figure></p>
-<h3 id="更新-submodule"><a href="#更新-submodule" class="headerlink" title="更新 submodule"></a>更新 submodule</h3><p>每個 submodule 獨自更新：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> &#123;module folder&#125;</div><div class="line">git pull origin master</div></pre></td></tr></table></figure></p>
-<p>但我很懶的，都用這個直接更新整個專案的 submodule<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git submodule foreach git pull</div></pre></td></tr></table></figure></p>
-<h3 id="下載有-submodule-的-repository"><a href="#下載有-submodule-的-repository" class="headerlink" title="下載有 submodule 的 repository"></a>下載有 submodule 的 repository</h3><p>下載 remote repository 到 local 端：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/yiskang/Blog.git</div></pre></td></tr></table></figure></p>
-<p>註冊 submodule 到 .gitmodules ，告訴 git 要新增哪些 modules<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git submodule init</div></pre></td></tr></table></figure></p>
-<p>將 submodule 的內容下載下來：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git submodule update</div></pre></td></tr></table></figure></p>
-<h3 id="移除-submodule"><a href="#移除-submodule" class="headerlink" title="移除 submodule"></a>移除 submodule</h3><p>如果不要想使用某個 submodule 了，要移除它要怎麼做呢？我們可以透過下面的步驟將它移除，但在移除前還有一些動作要做！移除 submodule 時得告訴 git 你要移除的 module 名稱，這名稱要去哪找？透過 .gitmodules 就可以啦，在新增 submodule 時，git就將它記錄在 .gitmodules 裡了。那假設現在要移除 pure theme module，我們可以在 .gitmodules 找到這樣的描述：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[submodule <span class="string">"theme/pure"</span>]</div><div class="line">      path = theme/pure</div><div class="line">      url = https://github.com/yiskang/hexo-theme-pure.git</div></pre></td></tr></table></figure></p>
-<p>module 明稱就是上面的 path，現在要移除 pure theme module，所以就是 theme/pure。 接著就可以開始進行移除了，移除 submodule 的命令就是：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git submodule deinit &#123;path/folder name&#125;</div><div class="line">git rm &#123;path/folder name&#125;     or  git rm --chched &#123;path/folder name&#125;</div></pre></td></tr></table></figure></p>
-<p>現在要將 pure theme module 移除，將上面的 {path/folder name} 換成 theme/pure：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 先移除 submodule 裡面的內容</span></div><div class="line">git submodule deinit theme/pure</div><div class="line"><span class="comment"># 移除資料夾</span></div><div class="line">git rm theme/pure</div><div class="line"><span class="comment"># 或者你不想留下先前的修改記錄，要將它從 Woking Tree 移除</span></div><div class="line">git rm --cached theme/pure</div></pre></td></tr></table></figure></p>
-<p>移除完以後，可以從 git status 看到：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">On branch master</div><div class="line">Changes to be committed:</div><div class="line">  (use <span class="string">"git reset HEAD &lt;file&gt;..."</span> to unstage)</div><div class="line">      modified:   .gitmodules</div><div class="line">      deleted:    theme/pure</div></pre></td></tr></table></figure></p>
-<p>最後記得 commit：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git add -A</div><div class="line">git commit -m <span class="string">"Remove submodule pure theme"</span></div></pre></td></tr></table></figure></p>
+<h3 id="新增-submodule"><a href="#新增-submodule" class="headerlink" title="新增 submodule"></a>新增 submodule</h3><p>指令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule add &#123;repository&#125;      &#123;path/folder name&#125;</span><br></pre></td></tr></table></figure>
+
+<p>範例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule add https://github.com/yiskang/hexo-theme-pure.git  theme/pure</span><br></pre></td></tr></table></figure>
+
+<p><b>注意：</b>在下新增指令前，請注意<span style="color:red;font-wegiht:bold;"> {path&#x2F;folder name} </span>的部份，先不要新增空目錄，git 自己會新增，不然 會產生衝突，submodule 就會無法新增。<b>不需要為 submodule 建立目錄</b></p>
+<p>新增完後會看到類似下面的內容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Cloning into <span class="string">&#x27;theme/pure&#x27;</span>...</span><br><span class="line">remote: Counting objects: 202, <span class="keyword">done</span>.</span><br><span class="line">remote: Compressing objects: 100% (27/27), <span class="keyword">done</span>.</span><br><span class="line">remote: Total 202 (delta 14), reused 0 (delta 0), pack-reused 175</span><br><span class="line">Receiving objects: 100% (202/202), 49.48 KiB | 0 bytes/s, <span class="keyword">done</span>.</span><br><span class="line">Resolving deltas: 100% (84/84), <span class="keyword">done</span>.</span><br><span class="line">Checking connectivity... <span class="keyword">done</span>.</span><br></pre></td></tr></table></figure>
+<p>這時候輸入 <code>git status</code> ，就會發現多了兩檔案需要 commit:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">On branch master</span><br><span class="line">Initial commit</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">&quot;git rm --cached &lt;file&gt;...&quot;</span> to unstage)</span><br><span class="line">      new file:   .gitmodules</span><br><span class="line">      new file:   theme/pure</span><br></pre></td></tr></table></figure>
+<p>此外，git 會將 submodule 的資訊記錄在 .gitmodules 裡面:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[submodule <span class="string">&quot;theme/pure&quot;</span>]</span><br><span class="line">      path = theme/pure</span><br><span class="line">      url = https://github.com/yiskang/hexo-theme-pure.git</span><br></pre></td></tr></table></figure>
+<p>最後記得要 commit :</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;Add submodule pure theme&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="更新-submodule"><a href="#更新-submodule" class="headerlink" title="更新 submodule"></a>更新 submodule</h3><p>每個 submodule 獨自更新：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &#123;module folder&#125;</span><br><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+
+<p>但我很懶的，都用這個直接更新整個專案的 submodule</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule foreach git pull</span><br></pre></td></tr></table></figure>
+
+<h3 id="下載有-submodule-的-repository"><a href="#下載有-submodule-的-repository" class="headerlink" title="下載有 submodule 的 repository"></a>下載有 submodule 的 repository</h3><p>下載 remote repository 到 local 端：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/yiskang/Blog.git</span><br></pre></td></tr></table></figure>
+<p>註冊 submodule 到 .gitmodules ，告訴 git 要新增哪些 modules</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule init</span><br></pre></td></tr></table></figure>
+<p>將 submodule 的內容下載下來：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule update</span><br></pre></td></tr></table></figure>
+
+<h3 id="移除-submodule"><a href="#移除-submodule" class="headerlink" title="移除 submodule"></a>移除 submodule</h3><p>如果不要想使用某個 submodule 了，要移除它要怎麼做呢？我們可以透過下面的步驟將它移除，但在移除前還有一些動作要做！移除 submodule 時得告訴 git 你要移除的 module 名稱，這名稱要去哪找？透過 .gitmodules 就可以啦，在新增 submodule 時，git就將它記錄在 .gitmodules 裡了。那假設現在要移除 pure theme module，我們可以在 .gitmodules 找到這樣的描述：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[submodule <span class="string">&quot;theme/pure&quot;</span>]</span><br><span class="line">      path = theme/pure</span><br><span class="line">      url = https://github.com/yiskang/hexo-theme-pure.git</span><br></pre></td></tr></table></figure>
+<p>module 明稱就是上面的 path，現在要移除 pure theme module，所以就是 theme&#x2F;pure。 接著就可以開始進行移除了，移除 submodule 的命令就是：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git submodule deinit &#123;path/folder name&#125;</span><br><span class="line">git <span class="built_in">rm</span> &#123;path/folder name&#125;     or  git <span class="built_in">rm</span> --chched &#123;path/folder name&#125;</span><br></pre></td></tr></table></figure>
+<p>現在要將 pure theme module 移除，將上面的 {path&#x2F;folder name} 換成 theme&#x2F;pure：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先移除 submodule 裡面的內容</span></span><br><span class="line">git submodule deinit theme/pure</span><br><span class="line"><span class="comment"># 移除資料夾</span></span><br><span class="line">git <span class="built_in">rm</span> theme/pure</span><br><span class="line"><span class="comment"># 或者你不想留下先前的修改記錄，要將它從 Woking Tree 移除</span></span><br><span class="line">git <span class="built_in">rm</span> --cached theme/pure</span><br></pre></td></tr></table></figure>
+<p>移除完以後，可以從 git status 看到：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">&quot;git reset HEAD &lt;file&gt;...&quot;</span> to unstage)</span><br><span class="line">      modified:   .gitmodules</span><br><span class="line">      deleted:    theme/pure</span><br></pre></td></tr></table></figure>
+<p>最後記得 commit：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&quot;Remove submodule pure theme&quot;</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yiskang.github.io/blog/blog/2015/04/16/git-submodule/" data-id="cixyhmykr0006iex74u5hkmcb" class="article-share-link">Share</a>
+      <a data-url="http://yiskang.github.io/blog/2015/04/16/git-submodule/" data-id="cuidqZSRoIb91Vu5Mxks87jK-" data-title="git submodule 介紹" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/git/">git</a></li></ul>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/git/" rel="tag">git</a></li></ul>
 
     </footer>
   </div>
@@ -470,7 +594,9 @@
 </article>
 
 
+
   
+
 
 </section>
         
@@ -478,7 +604,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Kategorien</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/">Tech</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/BIM/">BIM</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/Mac-OS/">Mac OS</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/OS-X/">OS X</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/Windows/">Windows</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/iOS/">iOS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Tech/iOS/UI/">UI</a></li></ul></li></ul></li></ul>
     </div>
@@ -490,7 +616,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OS-X/">OS X</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Objective-C/">Objective-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Plugin/">Plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Revit/">Revit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/UI/">UI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/iOS/">iOS</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OS-X/" rel="tag">OS X</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Objective-C/" rel="tag">Objective-C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Plugin/" rel="tag">Plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Revit/" rel="tag">Revit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Swift/" rel="tag">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/UI/" rel="tag">UI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/iOS/" rel="tag">iOS</a></li></ul>
     </div>
   </div>
 
@@ -507,7 +633,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/04/">April 2015</a></li></ul>
     </div>
@@ -517,12 +643,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List、Combobox-by-Swift/">iOS Pulldown List(Dropdown List、Combobox) by Swift</a>
+            <a href="/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List%E3%80%81Combobox-by-Swift/">iOS Pulldown List(Dropdown List、Combobox) by Swift</a>
           </li>
         
           <li>
@@ -538,7 +664,7 @@
           </li>
         
           <li>
-            <a href="/blog/2015/05/02/Mission-Control-沒有反應怎麼辦？/">Mission Control 沒有反應怎麼辦？</a>
+            <a href="/blog/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/">Mission Control 沒有反應怎麼辦？</a>
           </li>
         
       </ul>
@@ -553,11 +679,13 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Eason Kang<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      
+      &copy; 2026 Eason Kang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
+
     </div>
     <nav id="mobile-nav">
   
@@ -568,14 +696,22 @@
 </nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="/blog/js/jquery-3.6.4.min.js"></script>
 
 
-  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
-  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+  
+<script src="/blog/fancybox/jquery.fancybox.min.js"></script>
+
+
 
 
 <script src="/blog/js/script.js"></script>
+
+
+
+
 
   </div>
 </body>

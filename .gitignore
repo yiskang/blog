@@ -9,3 +9,5 @@ public/
 .deploy*/
 dist/
 .playwright-mcp/
+
+!.claude/settings.local.json

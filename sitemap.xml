@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://yiskang.github.io/blog/2015/04/29/%E5%9C%A8Terminal%E9%96%8B%E5%95%9FSublime/</loc>
+    <loc>http://yiskang.github.io/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List%E3%80%81Combobox-by-Swift/</loc>
     
     <lastmod>2026-07-13</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://yiskang.github.io/blog/2015/07/17/iOS-Pulldown-List-Dropdown-List%E3%80%81Combobox-by-Swift/</loc>
+    <loc>http://yiskang.github.io/blog/2015/04/29/%E5%9C%A8Terminal%E9%96%8B%E5%95%9FSublime/</loc>
     
     <lastmod>2026-07-13</lastmod>
     
@@ -130,14 +130,14 @@
   </url>
   
   <url>
-    <loc>http://yiskang.github.io/blog/tags/Hexo/</loc>
+    <loc>http://yiskang.github.io/blog/tags/Objective-C/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yiskang.github.io/blog/tags/Objective-C/</loc>
+    <loc>http://yiskang.github.io/blog/tags/Hexo/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -167,13 +167,6 @@
   </url>
   
   <url>
-    <loc>http://yiskang.github.io/blog/categories/Tech/OS-X/</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://yiskang.github.io/blog/categories/Tech/Mac-OS/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -189,6 +182,13 @@
   
   <url>
     <loc>http://yiskang.github.io/blog/categories/Tech/iOS/UI/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yiskang.github.io/blog/categories/Tech/OS-X/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

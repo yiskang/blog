@@ -11,7 +11,7 @@
   <link href="http://yiskang.github.io/blog/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, Eason Kang</rights>
   <title>13筆記</title>
-  <updated>2026-07-13T03:31:00.655Z</updated>
+  <updated>2026-07-13T03:40:12.963Z</updated>
   <entry>
     <author>
       <name>Eason Kang</name>
@@ -30,7 +30,7 @@
       <![CDATA[<p>最近因為工作的關係開始接觸 iOS SDK，Apple 官方文件算是頗齊全的，但相較於 Android 的手冊，還是略遜一疇（Google 大神還是比較有善～）。而本次目標是在 iOS 裡面新增一個簡單下拉式選單（Dropdown Menu、Pulldown Menu），憑]]>
     </summary>
     <title>iOS Pulldown List(Dropdown List、Combobox) by Swift</title>
-    <updated>2026-07-13T03:31:00.655Z</updated>
+    <updated>2026-07-13T03:40:12.963Z</updated>
   </entry>
   <entry>
     <author>
@@ -50,7 +50,7 @@
 <p>最近開始玩 iOS SDK，今天不知道哪根筋不對，突然不想用 Interface Builder 拉 UI，想直接用寫 Code 的方式生，所以我就翻了一下關方手冊，還有拜了 Google 大神！萬事起頭難，我們就先從簡單的開始吧，]]>
     </summary>
     <title>Add UITextField on UIView Programmitically by Swift</title>
-    <updated>2026-07-13T03:31:00.655Z</updated>
+    <updated>2026-07-13T03:40:12.963Z</updated>
   </entry>
   <entry>
     <author>
@@ -67,7 +67,7 @@
       <![CDATA[<p>前些日子因為要在 Mac OS X 上面安裝 Git 的圖形化管理程式，接觸了 Atlassian SourceTree 跟 Github for Mac，但由於工作上有需要使用 Atlassian Bitbucket，所以最後我選擇了 SourceTree。最近因為一些原]]>
     </summary>
     <title>Use Atlassian Source Tree embedded git in Windows</title>
-    <updated>2026-07-13T03:31:00.655Z</updated>
+    <updated>2026-07-13T03:40:12.963Z</updated>
   </entry>
   <entry>
     <author>
@@ -85,7 +85,7 @@
       <![CDATA[<p>最近萬惡的微軟（M$）突然大爆發，一直開源又將 Visual Studio 2013 Professional 釋出為 Visual Studio Community 版，免費提供大家使用。用 Visual Studio 2012 也好一陣子了，所以我想換口味試看看～ :P]]>
     </summary>
     <title>Revit debugging on Visual Studio 2013</title>
-    <updated>2026-07-13T03:31:00.655Z</updated>
+    <updated>2026-07-13T03:40:12.963Z</updated>
   </entry>
   <entry>
     <author>
@@ -102,7 +102,7 @@
       <![CDATA[<p>最近變的很不愛關電腦，常常螢幕一蓋就收到包包裡了。但久沒有重開機，有些應用程式就會不乖，突然沒有反應了，像這次不乖的就是 Mission Control。它掛掉的當下，我剛好在用 Evernote 語音記事記錄演討會的內容，沒辦法重開機，非常囧！！！還好 Mission C]]>
     </summary>
     <title>Mission Control 沒有反應怎麼辦？</title>
-    <updated>2026-07-13T03:31:00.655Z</updated>
+    <updated>2026-07-13T03:40:12.963Z</updated>
   </entry>
   <entry>
     <author>
@@ -120,7 +120,7 @@
 <p>就因]]>
     </summary>
     <title>在 Terminal 開啟 Sublime</title>
-    <updated>2026-07-13T03:31:00.655Z</updated>
+    <updated>2026-07-13T03:40:12.963Z</updated>
   </entry>
   <entry>
     <author>
@@ -136,6 +136,6 @@
       <![CDATA[<h3 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h3><p>最近為了方便管理專案，將他拆成了好幾個小專案來維護，然後透過參考引入想要的檔案。但 git 沒辦法像 SVN 那樣只單獨下載一個檔案，它必需]]>
     </summary>
     <title>git submodule 介紹</title>
-    <updated>2026-07-13T03:31:00.655Z</updated>
+    <updated>2026-07-13T03:40:12.963Z</updated>
   </entry>
 </feed>

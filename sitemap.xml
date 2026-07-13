@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yiskang.github.io/blog/2015/07/17/Add-UITextField-on-UIView-Programmitically-by-Swift/</loc>
+    
+    <lastmod>2026-07-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://yiskang.github.io/blog/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/</loc>
     
     <lastmod>2026-07-13</lastmod>
@@ -20,15 +29,6 @@
   </url>
   
   <url>
-    <loc>http://yiskang.github.io/blog/2015/04/16/git-submodule/</loc>
-    
-    <lastmod>2026-07-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yiskang.github.io/blog/2015/05/06/Use-Atlassian-Source-Tree-embedded-git-in-Windows/</loc>
     
     <lastmod>2026-07-13</lastmod>
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://yiskang.github.io/blog/2015/04/29/%E5%9C%A8Terminal%E9%96%8B%E5%95%9FSublime/</loc>
+    <loc>http://yiskang.github.io/blog/2015/04/16/git-submodule/</loc>
     
     <lastmod>2026-07-13</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://yiskang.github.io/blog/2015/07/17/Add-UITextField-on-UIView-Programmitically-by-Swift/</loc>
+    <loc>http://yiskang.github.io/blog/2015/04/29/%E5%9C%A8Terminal%E9%96%8B%E5%95%9FSublime/</loc>
     
     <lastmod>2026-07-13</lastmod>
     
@@ -74,6 +74,27 @@
 
   
   <url>
+    <loc>http://yiskang.github.io/blog/tags/iOS/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yiskang.github.io/blog/tags/UI/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yiskang.github.io/blog/tags/Swift/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://yiskang.github.io/blog/tags/OS-X/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -95,13 +116,6 @@
   </url>
   
   <url>
-    <loc>http://yiskang.github.io/blog/tags/git/</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://yiskang.github.io/blog/tags/Git/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -109,28 +123,14 @@
   </url>
   
   <url>
+    <loc>http://yiskang.github.io/blog/tags/git/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://yiskang.github.io/blog/tags/Hexo/</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yiskang.github.io/blog/tags/iOS/</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yiskang.github.io/blog/tags/UI/</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yiskang.github.io/blog/tags/Swift/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -160,7 +160,7 @@
   </url>
   
   <url>
-    <loc>http://yiskang.github.io/blog/categories/Tech/Mac-OS/</loc>
+    <loc>http://yiskang.github.io/blog/categories/Tech/iOS/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -174,7 +174,7 @@
   </url>
   
   <url>
-    <loc>http://yiskang.github.io/blog/categories/Tech/iOS/</loc>
+    <loc>http://yiskang.github.io/blog/categories/Tech/Mac-OS/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

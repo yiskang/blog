@@ -13,16 +13,9 @@
 
     "deny": [
       "Edit(node_modules/**)",
-      "Write(node_modules/**)",
-
       "Edit(.deploy_git/**)",
-      "Write(.deploy_git/**)",
-
       "Edit(.git/config)",
-      "Write(.git/config)",
-
-      "Edit(.git/hooks/**)",
-      "Write(.git/hooks/**)"
+      "Edit(.git/hooks/**)"
     ]
   },
 
